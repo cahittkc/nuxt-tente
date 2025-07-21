@@ -3,28 +3,53 @@
     <!-- Hero -->
           <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in  bg-[url(@/assests/images/tente1.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
         <!-- Overlay for better text readability -->
-        <div class="absolute inset-0 bg-black/60"></div>
-        <!-- Content -->
-        <div class="relative z-10 max-w-4xl mx-auto">
-          <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
-            Uzman Deneyimli<br>
-            <span class="text-red-400">Garantili Çözümler</span>
-          </h1>
-          <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-            ..... ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
-          </p>
-          <NuxtLink
-            to="/iletisim"
-            class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition-all duration-300 animate-bounce-in"
-          >
-            Ücretsiz Keşif Talep Et
-          </NuxtLink>
+            <div class="absolute inset-0 bg-black/60"></div>
+            <!-- Content -->
+            <div class="relative z-10 max-w-4xl mx-auto">
+              <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
+              <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
+                Uzman Deneyimli<br>
+                <span class="text-red-400">Garantili Çözümler</span>
+              </h1>
+              <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
+                ..... ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
+              </p>
+              <NuxtLink
+                to="/iletisim"
+                class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition-all duration-300 animate-bounce-in"
+              >
+                Ücretsiz Keşif Talep Et
+              </NuxtLink>
+            </div>
+            <!-- Slider indicator -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+              <div class="w-3 h-3 border-2 border-white rounded-full"></div>
+            </div>
         </div>
-        <!-- Slider indicator -->
-        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-          <div class="w-3 h-3 border-2 border-white rounded-full"></div>
-        </div>
+
+    <!-- Ürün Gruplarımız Bölümü -->
+    <div class="container mx-auto py-16">
+      <div class="text-center mb-12 animate-fade-in-down">
+        <span class="uppercase text-red-600 font-semibold tracking-widest">ÜRÜNLERİMİZ</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-2 tracking-wider">ÜRÜN GRUPLARIMIZ</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <NuxtLink
+          v-for="(item, i) in urunler"
+          :key="i"
+          to="/products"
+          class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-500 hover:scale-105 animate-fade-in-up cursor-pointer"
+          :style="{ animationDelay: `${i * 0.08 + 0.2}s` }"
+        >
+          <div class="h-56 w-full bg-gray-200 flex items-center justify-center">
+            <img :src="item.img" :alt="item.title" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 uppercase tracking-wider">{{ item.title }}</h3>
+            <span class="text-xs text-gray-400 font-semibold tracking-widest">ÜRÜNLERİ İNCELE</span>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
 
     <div class="container mx-auto pt-5">
@@ -141,6 +166,7 @@
 
       <!-- Referanslar -->
       <div class="my-5">
+        <h3 class="text-center text-gray-700 font-semibold mb-6 tracking-widest">MÜŞTERİ MEMNUNİYETİ</h3>
         <Carousel v-bind="carouselReferenceConfig">
           <Slide>
             <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] hover: transition-shadow duration-300">
@@ -275,6 +301,12 @@
 
 <script setup lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+ import pergolaImg from '@/assests/images/pergola.jpg'
+ import glass from "@/assests/images/glass.jpg"
+ import curtains from "@/assests/images/curtains.jpg"
+ import tarpaulin from "@/assests/images/tarpaulin.jpg"
+import tent from "@/assests/images/tent.jpg"
+import tent2 from "@/assests/images/tent2.jpg" 
 
 definePageMeta({
   layout: 'default'
@@ -295,6 +327,33 @@ const sirketCarousel = {
   autoplay: 7000,
   pauseAutoplayOnHover: true,
 }
+
+const urunler = [
+  {
+    title: 'PERGOLA',
+    img: pergolaImg,
+  },
+  {
+    title: 'TENTE',
+    img: tent,
+  },
+  {
+    title: 'CAM SİSTEMLERİ',
+    img: glass,
+  },
+  {
+    title: 'TEKNİK TEKSTİL PERDELER',
+    img: curtains,
+  },
+  {
+    title: 'BRANDA UYGULAMALARI',
+    img: tarpaulin,
+  },
+  {
+    title: 'ÇADIR',
+    img: tent2,
+  },
+]
 
 
 </script>
@@ -326,8 +385,8 @@ const sirketCarousel = {
   100% { transform: translateX(-50%); }
 }
 .animate-fade-in { animation: fade-in 1s ease; }
-.animate-fade-in-down { animation: fade-in-down 1s ease; }
-.animate-fade-in-up { animation: fade-in-up 1s ease; }
+.animate-fade-in-down { animation: fade-in-down 0.8s cubic-bezier(.68,-0.55,.27,1.55); }
+.animate-fade-in-up { animation: fade-in-up 0.8s cubic-bezier(.68,-0.55,.27,1.55); }
 .animate-bounce-in { animation: bounce-in 0.7s cubic-bezier(.68,-0.55,.27,1.55); }
 .animate-carousel {
   min-width: 200%;

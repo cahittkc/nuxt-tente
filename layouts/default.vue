@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-gray-100">
-    <appHeader/>
-    <main class="">
+  <div>
+    <appHeader />
+    <main>
       <slot />
     </main>
+    <appFooter />
   </div>
-</template> 
+</template>
 
-
-
-<script setup lang="ts">
-import appHeader from '~/components/appHeader.vue';
+<script setup>
+import appHeader from '@/components/appHeader.vue'
+import appFooter from '@/components/appFooter.vue'
 </script>

@@ -17,7 +17,7 @@
       <div class="flex flex-col gap-2">
         <span class="text-lg font-bold text-white mb-2">Menü</span>
         <NuxtLink to="/" class="text-gray-300 hover:text-red-500 transition-colors">Ana Sayfa</NuxtLink>
-        <NuxtLink to="/urunlerimiz" class="text-gray-300 hover:text-red-500 transition-colors">Ürünlerimiz</NuxtLink>
+        <NuxtLink to="/products" class="text-gray-300 hover:text-red-500 transition-colors">Ürünlerimiz</NuxtLink>
         <NuxtLink to="/hakkimizda" class="text-gray-300 hover:text-red-500 transition-colors">Hakkımızda</NuxtLink>
         <NuxtLink to="/iletisim" class="text-gray-300 hover:text-red-500 transition-colors">İletişim</NuxtLink>
       </div>

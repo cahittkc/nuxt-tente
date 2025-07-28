@@ -1,9 +1,9 @@
 <template>
   <!-- Hero/Banner -->
-  <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assests/images/pergola33.jpg)] bg-cover h-[600px] bg-center bg-no-repeat relative">
+  <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola33.jpg)] bg-cover h-[600px] bg-center bg-no-repeat relative">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 max-w-3xl mx-auto">
-      <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">STANDART BLOCKOUT PERGOLA</span>
+      <span class="uppercase tracking-widest text-white text-2xl font-semibold mb-3 animate-fade-in-down">STANDART BLOCKOUT PERGOLA</span>
       <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
         Dört Mevsim Konfor, <span class="text-red-400">Maksimum Dayanıklılık</span>
       </h1>
@@ -12,7 +12,7 @@
       </p>
       <NuxtLink
         to="/iletisim"
-        class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition-all duration-300 animate-bounce-in"
+        class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
       >
         Hemen Teklif Al
       </NuxtLink>
@@ -53,24 +53,24 @@
         </ul>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in">
-            <span class="text-red-600 font-bold text-lg mb-1">5 Yıl</span>
+            <span class="text-main-default font-bold text-lg mb-1">5 Yıl</span>
             <span class="text-xs text-gray-700 font-semibold mb-2">Motor Garantisi</span>
-            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
+            <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
           </div>
           <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in" style="animation-delay:0.1s">
-            <span class="text-red-600 font-bold text-lg mb-1">2 Yıl</span>
+            <span class="text-main-default font-bold text-lg mb-1">2 Yıl</span>
             <span class="text-xs text-gray-700 font-semibold mb-2">Sistem Garantisi</span>
-            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a5 5 0 00-10 0v2"></path><rect width="20" height="14" x="2" y="9" rx="2"></rect></svg>
+            <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a5 5 0 00-10 0v2"></path><rect width="20" height="14" x="2" y="9" rx="2"></rect></svg>
           </div>
           <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in" style="animation-delay:0.2s">
-            <span class="text-red-600 font-bold text-lg mb-1">5 Yıl</span>
+            <span class="text-main-default font-bold text-lg mb-1">5 Yıl</span>
             <span class="text-xs text-gray-700 font-semibold mb-2">Blockout Kumaş Garantisi</span>
-            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2a4 4 0 018 0v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2a4 4 0 018 0v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           </div>
         </div>
         <NuxtLink
           to="/iletisim"
-          class="block w-full text-center px-8 py-4 bg-red-600 text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition-all duration-300 hover:scale-105"
+          class="block w-full text-center px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 hover:scale-105"
         >
           Teklif Al
         </NuxtLink>
@@ -80,7 +80,7 @@
     <!-- Özellikler ve Teknik Det.... -->
     <div class="mt-12 bg-white rounded-xl shadow p-6 animate-fade-in-up">
       <div class="flex gap-4 border-b border-gray-200 mb-6">
-        <button class="px-4 py-2 font-bold text-red-600 border-b-2 border-red-600 focus:outline-none">Özellikler</button>
+        <button class="px-4 py-2 font-bold text-main-default border-b-2 border-main-default focus:outline-none">Özellikler</button>
         <button class="px-4 py-2 font-bold text-gray-400 cursor-not-allowed" disabled>Teknik Detaylar</button>
       </div>
       <ul class="text-gray-700 space-y-2 list-disc list-inside">

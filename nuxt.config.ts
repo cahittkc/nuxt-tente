@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
   devServer : {
     port : 8080
@@ -8,12 +6,9 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  css: ['./assests/css/main.css'],
-
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
-  },
-  modules: ['vue3-carousel-nuxt'],
+  css: ['./assets/css/main.css'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'vue3-carousel-nuxt'
+  ],
 })

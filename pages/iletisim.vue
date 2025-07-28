@@ -1,6 +1,6 @@
 <template>
   <!-- Hero/Banner -->
-  <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assests/images/pergola2.jpg)] bg-cover h-[500px] bg-center bg-no-repeat relative">
+  <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(https://tent-bckt.s3.eu-north-1.amazonaws.com/products_banner.jpg)] bg-cover h-[500px] bg-center bg-no-repeat relative">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 max-w-3xl mx-auto">
       <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">İLETİŞİM</span>
@@ -27,7 +27,7 @@
           <ul class="text-gray-700 space-y-2">
             <li><span class="font-semibold">Adres:</span> İzmir, Türkiye</li>
             <li><span class="font-semibold">Telefon:</span> 0 555 123 45 67</li>
-            <li><span class="font-semibold">E-posta:</span> info@....tente.com</li>
+            <li><span class="font-semibold">E-posta:</span> info@legendarytente.com</li>
           </ul>
         </div>
         <div>
@@ -44,7 +44,7 @@
         </div>
         <input type="tel" placeholder="Telefon Numaranız" class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
         <textarea placeholder="Mesajınız" rows="5" class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-red-400 transition" required></textarea>
-        <button type="submit" class="w-full py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-all duration-300 hover:scale-105">
+        <button type="submit" class="w-full py-3 bg-main-default text-white font-bold rounded-lg shadow hover:bg-main-600 transition-all duration-300 hover:scale-105">
           Gönder
         </button>
       </form>

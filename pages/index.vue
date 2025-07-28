@@ -1,22 +1,22 @@
 <template>
   <section class="min-h-screen flex flex-col">
     <!-- Hero -->
-          <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in  bg-[url(@/assests/images/tente1.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
+          <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in  bg-[url(https://tent-bckt.s3.eu-north-1.amazonaws.com/homepage_banner.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
         <!-- Overlay for better text readability -->
-            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
             <!-- Content -->
             <div class="relative z-10 max-w-4xl mx-auto">
-              <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
+              <span class="uppercase tracking-widest text-white font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
               <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
                 Uzman Deneyimli<br>
                 <span class="text-red-400">Garantili Çözümler</span>
               </h1>
               <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-                ..... ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
+                Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
               </p>
               <NuxtLink
                 to="/iletisim"
-                class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition-all duration-300 animate-bounce-in"
+                class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
               >
                 Ücretsiz Keşif Talep Et
               </NuxtLink>
@@ -62,25 +62,25 @@
                 <span class="text-sm font-semibold text-red-600 uppercase tracking-widest">Hakkımızda</span>
               </div>
               <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-down">
-                40 Yıllık <span class="text-red-600 animate-pulse">Deneyim</span> ile Güvenilir Çözümler
+                30 Yıllık <span class="text-main-default animate-pulse">Deneyim</span> ile Güvenilir Çözümler
               </h2>
               <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up">
-                1984 yılından bu yana İzmir'de faaliyet gösteren ....., dış mekan gölgelendirme sistemlerinde Türkiye'nin önde gelen firmalarından biridir. Modern teknoloji ve geleneksel ustalığı birleştirerek, müşterilerimize en kaliteli tente çözümlerini sunuyoruz.
+                1994 yılından bu yana İzmir'de faaliyet gösteren Legendary Tente, dış mekan gölgelendirme sistemlerinde Türkiye'nin önde gelen firmalarından biridir. Modern teknoloji ve geleneksel ustalığı birleştirerek, müşterilerimize en kaliteli tente çözümlerini sunuyoruz.
               </p>
               <div class="grid grid-cols-2 gap-6 pt-6">
                 <div class="text-center animate-bounce-in">
-                  <div class="text-3xl font-bold text-red-600 mb-2 counter-animation" data-target="1500">%98</div>
+                  <div class="text-3xl font-bold text-main-default mb-2 counter-animation" data-target="1500">%98</div>
                   <div class="text-sm text-gray-600">Mutlu Müşteri</div>
                 </div>
                 <div class="text-center animate-bounce-in">
-                  <div class="text-3xl font-bold text-red-600 mb-2 counter-animation" data-target="40">12</div>
+                  <div class="text-3xl font-bold text-main-default mb-2 counter-animation" data-target="40">30</div>
                   <div class="text-sm text-gray-600">Yıllık Deneyim</div>
                 </div>
               </div>
               <div class="pt-4 animate-fade-in-up">
                 <NuxtLink
                   to="/hakkimizda"
-                  class="inline-flex items-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 group hover:scale-105"
+                  class="inline-flex items-center px-6 py-3 bg-main-default text-white font-semibold rounded-lg hover:bg-main-600 transition-all duration-300 group hover:scale-105"
                 >
                   Daha Fazla Bilgi
                   <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -169,27 +169,27 @@
         <h3 class="text-center text-gray-700 font-semibold mb-6 tracking-widest">MÜŞTERİ MEMNUNİYETİ</h3>
         <Carousel v-bind="carouselReferenceConfig">
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] hover: transition-shadow duration-300">
-              <p class="text-gray-600 italic mb-2">"..... ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
-              <span class="block text-right text-red-600 font-semibold">- Selin A.</span>
+            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Legendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
+              <span class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</span>
             </div>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] hover: transition-shadow duration-300">
+            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
               <p class="text-gray-600 italic mb-2">"Hızlı montaj ve kaliteli malzeme, kesinlikle tavsiye ederim."</p>
-              <span class="block text-right text-blue-600 font-semibold">- Murat K.</span>
+              <span class="block text-right text-blue-600 font-semibold mt-auto">- Murat K.</span>
             </div>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] hover: transition-shadow duration-300">
-              <p class="text-gray-600 italic mb-2">"..... ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
-              <span class="block text-right text-red-600 font-semibold">- Selin A.</span>
+            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Legendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
+              <span class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</span>
             </div>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] hover: transition-shadow duration-300">
+            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
               <p class="text-gray-600 italic mb-2">"Hızlı montaj ve kaliteli malzeme, kesinlikle tavsiye ederim."</p>
-              <span class="block text-right text-blue-600 font-semibold">- Murat K.</span>
+              <span class="block text-right text-blue-600 font-semibold mt-auto">- Murat K.</span>
             </div>
           </Slide>
         </Carousel>
@@ -301,12 +301,12 @@
 
 <script setup lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
- import pergolaImg from '@/assests/images/pergola.jpg'
- import glass from "@/assests/images/glass.jpg"
- import curtains from "@/assests/images/curtains.jpg"
- import tarpaulin from "@/assests/images/tarpaulin.jpg"
-import tent from "@/assests/images/tent.jpg"
-import tent2 from "@/assests/images/tent2.jpg" 
+ import pergolaImg from '@/assets/images/pergola.jpg'
+ import glass from "@/assets/images/glass.jpg"
+ import curtains from "@/assets/images/curtains.jpg"
+ import tarpaulin from "@/assets/images/tarpaulin.jpg"
+import tent from "@/assets/images/tent.jpg"
+import tent2 from "@/assets/images/tent2.jpg" 
 
 definePageMeta({
   layout: 'default'

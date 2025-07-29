@@ -6,7 +6,7 @@
       <span class="uppercase tracking-widest text-red-500 font-semibold mb-3 animate-fade-in-down">İLETİŞİM</span>
       <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
         Bize Ulaşın<br>
-        <span class="text-red-400">Sorularınız ve Talepleriniz İçin</span>
+        <span class="text-main-400">Sorularınız ve Talepleriniz İçin</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
         Tüm sorularınız, teklif talepleriniz ve işbirliği fırsatları için bizimle iletişime geçebilirsiniz. Uzman ekibimiz en kısa sürede size dönüş yapacaktır.

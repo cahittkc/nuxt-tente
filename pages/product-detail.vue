@@ -5,7 +5,7 @@
     <div class="relative z-10 max-w-3xl mx-auto">
       <span class="uppercase tracking-widest text-white text-2xl font-semibold mb-3 animate-fade-in-down">STANDART BLOCKOUT PERGOLA</span>
       <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
-        Dört Mevsim Konfor, <span class="text-red-400">Maksimum Dayanıklılık</span>
+        Dört Mevsim Konfor, <span class="text-main-400">Maksimum Dayanıklılık</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
         Su geçirmez özel kumaşı, modern tasarımı ve uzun ömürlü yapısıyla Standart Blockout Pergola, dış mekanlarınız için en iyi gölgelendirme çözümüdür. Şık görünümü ve fonksiyonel özellikleriyle her mevsim keyifli alanlar yaratın.

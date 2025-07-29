@@ -5,7 +5,7 @@
     <div class="relative z-10 max-w-4xl mx-auto">
       <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
         Geniş Ürün Yelpazesi<br>
-        <span class="text-red-400">Her Mekâna Uygun Çözümler</span>
+        <span class="text-main-400">Her Mekâna Uygun Çözümler</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
         Pergola, tente, cam sistemleri ve daha fazlası Legendary Tente olarak dış mekanlarınız için estetik ve fonksiyonel ürün gruplarımızı keşfedin. Her ihtiyaca uygun, kaliteli ve dayanıklı çözümlerimizle yaşam alanlarınızı güzelleştiriyoruz.

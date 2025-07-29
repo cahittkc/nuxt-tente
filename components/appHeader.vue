@@ -39,7 +39,7 @@
         </NuxtLink>
         <div class="w-px h-6 mx-2 transition-colors duration-200" :class="isScrolled ? 'bg-gray-300' : 'bg-gray-400'"></div>
         <NuxtLink
-          to="/iletisim"
+          to="/contact"
           class="relative px-6 py-2 bg-gradient-to-r from-main-default to-main-600  text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 group"
         >
           <span class="relative z-10">TEKLİF AL</span>
@@ -83,7 +83,7 @@
           ÜRÜNLERİMİZ
         </NuxtLink>
         <NuxtLink
-          to="/iletisim"
+          to="/contact"
           class="block px-4 py-3 bg-gradient-to-r from-main-600 to-main-default text-white font-bold rounded-lg text-center shadow-md"
           @click="closeMobileMenu"
         >

@@ -11,7 +11,7 @@
         Pergola, tente, cam sistemleri ve daha fazlası Legendary Tente olarak dış mekanlarınız için estetik ve fonksiyonel ürün gruplarımızı keşfedin. Her ihtiyaca uygun, kaliteli ve dayanıklı çözümlerimizle yaşam alanlarınızı güzelleştiriyoruz.
       </p>
       <NuxtLink
-        to="/iletisim"
+        to="/contact"
         class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
       >
         Ürün Danışmanlığı Al
@@ -41,7 +41,7 @@
       <div
         v-for="(product, i) in filteredProducts"
         :key="product.id"
-        class="bg-white rounded-xl shadow-lg flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up"
+        class="bg-white max-md:p-2 rounded-xl shadow-lg flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up"
         :style="{ animationDelay: `${i * 0.08 + 0.2}s` }"
       >
         <div class="bg-gray-100 flex items-center justify-center h-56 w-full overflow-hidden">

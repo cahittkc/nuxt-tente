@@ -11,7 +11,7 @@
         Su geçirmez özel kumaşı, modern tasarımı ve uzun ömürlü yapısıyla Standart Blockout Pergola, dış mekanlarınız için en iyi gölgelendirme çözümüdür. Şık görünümü ve fonksiyonel özellikleriyle her mevsim keyifli alanlar yaratın.
       </p>
       <NuxtLink
-        to="/iletisim"
+        to="/contact"
         class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
       >
         Hemen Teklif Al
@@ -69,7 +69,7 @@
           </div>
         </div>
         <NuxtLink
-          to="/iletisim"
+          to="/contact"
           class="block w-full text-center px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 hover:scale-105"
         >
           Teklif Al

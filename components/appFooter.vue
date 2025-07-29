@@ -17,7 +17,7 @@
         <NuxtLink to="/" class="text-gray-300 hover:text-main-default transition-colors">Ana Sayfa</NuxtLink>
         <NuxtLink to="/products" class="text-gray-300 hover:text-main-default transition-colors">Ürünlerimiz</NuxtLink>
         <NuxtLink to="/hakkimizda" class="text-gray-300 hover:text-main-default transition-colors">Hakkımızda</NuxtLink>
-        <NuxtLink to="/iletisim" class="text-gray-300 hover:text-main-default transition-colors">İletişim</NuxtLink>
+        <NuxtLink to="/contact" class="text-gray-300 hover:text-main-default transition-colors">İletişim</NuxtLink>
       </div>
       <!-- Sağ: İletişim -->
       <div class="flex flex-col gap-2">

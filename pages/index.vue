@@ -15,7 +15,7 @@
                 Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
               </p>
               <NuxtLink
-                to="/iletisim"
+                to="/contact"
                 class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
               >
                 Ücretsiz Keşif Talep Et
@@ -33,7 +33,7 @@
         <span class="uppercase text-red-600 font-semibold tracking-widest">ÜRÜNLERİMİZ</span>
         <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-2 tracking-wider">ÜRÜN GRUPLARIMIZ</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 max-md:p-2 gap-8">
         <NuxtLink
           v-for="(item, i) in urunler"
           :key="i"
@@ -309,7 +309,18 @@ import tent from "@/assets/images/tent.jpg"
 import tent2 from "@/assets/images/tent2.jpg" 
 
 definePageMeta({
-  layout: 'default'
+  layout: 'default',
+  title: 'Legendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri',
+  meta: [
+    {
+      name: 'description',
+      content: 'Legendary Tente ile İzmir’de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. Ücretsiz keşif ile tanışın.'
+    },
+    {
+      name: 'keywords',
+      content: 'tente izmir, pergola, branda, cam balkon, gölgelendirme sistemleri'
+    }
+  ]
 })
 
 const carouselReferenceConfig = {

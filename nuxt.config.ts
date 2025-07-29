@@ -10,5 +10,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'vue3-carousel-nuxt',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt'
   ],
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
 })

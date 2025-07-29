@@ -17,4 +17,11 @@
 
 
 <script setup lang="ts">
+
+const store = useStore()
+
+onMounted(() => {
+  console.log(store.products)
+})
+
 </script>

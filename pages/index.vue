@@ -6,10 +6,10 @@
             <div class="absolute inset-0 bg-black/40"></div>
             <!-- Content -->
             <div class="relative z-10 max-w-4xl mx-auto">
-              <span class="uppercase tracking-widest text-white font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
+              <span class="uppercase tracking-widest text-main-300 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
               <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
                 Uzman Deneyimli<br>
-                <span class="text-main-400">Garantili Çözümler</span>
+                <span class="text-main-300">Garantili Çözümler</span>
               </h1>
               <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
                 Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.

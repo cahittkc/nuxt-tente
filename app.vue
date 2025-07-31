@@ -22,6 +22,14 @@ const store = useStore()
 
 onMounted(() => {
   console.log(store.products)
+
+  const productName = store.products.map(e => {
+    return e.title
+  })
+
+  console.log(productName);
+  
+
 })
 
 </script>

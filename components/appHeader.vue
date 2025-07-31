@@ -8,7 +8,6 @@
           <div class="w-10 h-10 bg-gradient-to-br  rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-200 group-hover:scale-105">
             <img src="../assets/images/logo3.png" alt="Logo" class="max-w-[150px] h-20 object-cover">
           </div>
-          <div class="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full border-2 border-black animate-pulse"></div>
         </div>
         <div class="flex flex-col ml-3">
           <span class="text-2xl font-black tracking-tight  transition-colors duration-200" :class="isScrolled ? 'text-main-default' : 'text-white'">Legendary</span>

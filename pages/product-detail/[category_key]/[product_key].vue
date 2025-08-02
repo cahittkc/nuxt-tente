@@ -1,10 +1,10 @@
 <template>
     <!-- Hero/Banner -->
-    <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola33.jpg)] bg-cover h-[600px] bg-center bg-no-repeat relative">
+    <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola33.jpg)] bg-cover h-[600px] bg-center bg-no-repeat relative">
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="relative z-10 max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-extrabold text-main-400 mb-6 animate-fade-in-down leading-tight">
-          {{ product!.title }}
+          {{ product?.title || 'Ürün Detayı' }}
         </h1>
         <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
           Su geçirmez özel kumaşı, modern tasarımı ve uzun ömürlü yapısıyla Standart Blockout Pergola, dış mekanlarınız için en iyi gölgelendirme çözümüdür. Şık görünümü ve fonksiyonel özellikleriyle her mevsim keyifli alanlar yaratın.
@@ -12,6 +12,7 @@
         <NuxtLink
           to="/contact"
           class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
+          aria-label="Bu ürün için teklif al"
         >
           Hemen Teklif Al
         </NuxtLink>
@@ -19,18 +20,24 @@
       <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
         <div class="w-3 h-3 border-2 border-white rounded-full"></div>
       </div>
-    </div>
+    </header>
   
-    <!-- Ürün Det....ı -->
-    <div class="container mx-auto py-12 px-4">
+    <!-- Ürün Detayı -->
+    <main class="container mx-auto py-12 px-4" aria-labelledby="product-details-heading">
+      <h2 id="product-details-heading" class="sr-only">Ürün Detayları</h2>
       <div class="grid md:grid-cols-2 gap-10">
         <!-- Sol: Büyük görsel ve galeri -->
-        <div>
+        <section aria-label="Ürün görselleri">
           <div class="flex flex-1 flex-col gap-4 h-full">
               <div class="flex-1 h-full">
                 <Carousel id="gallery" v-bind="galleryConfig" v-model="currentSlide">
-                  <Slide v-for="image in product!.images" :key="image">
-                    <img :src="image" alt="Gallery Image" class="gallery-image h-full w-full object-cover" />
+                  <Slide v-for="(image, index) in product?.images || []" :key="index">
+                    <img 
+                      :src="image" 
+                      :alt="`${product?.title || 'Ürün'} görseli ${index + 1}`" 
+                      class="gallery-image h-full w-full object-cover" 
+                      loading="lazy"
+                    />
                   </Slide>
                   <template #addons>
                     <Navigation />
@@ -38,14 +45,22 @@
                 </Carousel>
               </div>
               <div class="mt-auto">
-                <Carousel  id="thumbnails" v-bind="thumbnailsConfig" v-model="currentSlide">
-                  <Slide v-for="image in product!.images" :key="image">
+                <Carousel id="thumbnails" v-bind="thumbnailsConfig" v-model="currentSlide">
+                  <Slide v-for="(image, index) in product?.images || []" :key="index">
                     <template #default="{ currentIndex, isActive }">
                       <div
                         :class="['thumbnail', { 'is-active': isActive }]"
                         @click="slideTo(currentIndex)"
+                        :aria-label="`${product?.title || 'Ürün'} görseli ${index + 1}`"
+                        role="button"
+                        tabindex="0"
                       >
-                        <img :src="image" alt="Thumbnail Image" class="thumbnail-image" />
+                        <img 
+                          :src="image" 
+                          :alt="`${product?.title || 'Ürün'} küçük görsel ${index + 1}`" 
+                          class="thumbnail-image" 
+                          loading="lazy"
+                        />
                       </div>
                     </template>
                   </Slide>
@@ -56,84 +71,128 @@
                 </Carousel>
               </div>
           </div>
-        </div>
+        </section>
         <!-- Sağ: Başlık, öne çıkanlar, garanti, buton -->
-        <div class="animate-slide-in-right">
-          <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">{{ product!.title }}</h2>
-          <ul class="text-gray-700 space-y-2 mb-6 list-disc list-inside animate-fade-in-up">
-            <li v-for="property in product!.properties" :key="property">{{ property }}</li>
+        <article class="animate-slide-in-right">
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">{{ product?.title || 'Ürün Detayı' }}</h3>
+          <ul class="text-gray-700 space-y-2 mb-6 list-disc list-inside animate-fade-in-up" role="list">
+            <li v-for="property in product?.properties || []" :key="property" role="listitem">{{ property }}</li>
           </ul>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in">
-              <span class="text-main-default font-bold text-lg mb-1">5 Yıl</span>
-              <span class="text-xs text-gray-700 font-semibold mb-2">Motor Garantisi</span>
-              <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-            <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in" style="animation-delay:0.1s">
-              <span class="text-main-default font-bold text-lg mb-1">2 Yıl</span>
-              <span class="text-xs text-gray-700 font-semibold mb-2">Sistem Garantisi</span>
-              <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a5 5 0 00-10 0v2"></path><rect width="20" height="14" x="2" y="9" rx="2"></rect></svg>
-            </div>
-            <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center animate-bounce-in" style="animation-delay:0.2s">
-              <span class="text-main-default font-bold text-lg mb-1">5 Yıl</span>
-              <span class="text-xs text-gray-700 font-semibold mb-2">Blockout Kumaş Garantisi</span>
-              <svg class="w-8 h-8 text-main-default" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2a4 4 0 018 0v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </div>
-          </div>
           <NuxtLink
             to="/contact"
             class="block w-full text-center px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 hover:scale-105"
+            aria-label="Bu ürün için teklif al"
           >
             Teklif Al
           </NuxtLink>
-        </div>
+        </article>
       </div>
   
-      <!-- Özellikler ve Teknik Det.... -->
-      <div class="mt-12 bg-white rounded-xl shadow p-6 animate-fade-in-up">
-        <div class="flex gap-4 border-b border-gray-200 mb-6">
-          <button class="px-4 py-2 font-bold text-main-default border-b-2 border-main-default focus:outline-none">Özellikler</button>
-          <button class="px-4 py-2 font-bold text-gray-400 cursor-not-allowed" disabled>Teknik Detaylar</button>
-        </div>
-        <ul class="text-gray-700 space-y-2 list-disc list-inside">
-          <li>Su geçirmez özel Blockout kumaş ile dört mevsim kullanım.</li>
-          <li>Bakım gerektirmeyen, uzun ömürlü alüminyum gövde.</li>
-          <li>LED aydınlatma ve uzaktan kumanda opsiyonu.</li>
-          <li>Elektrostatik toz boya ile sınırsız renk seçeneği.</li>
-          <li>ISO 9001 ve CE sertifikalı üretim.</li>
-        </ul>
-      </div>
-    </div>
+      <!-- Özellikler ve Teknik Detaylar -->
+      
+    </main>
   </template>
   
   <script setup lang="ts">
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   import 'vue3-carousel/dist/carousel.css'
 
-
   const currentSlide = ref(0)
   const slideTo = (nextSlide: number) => (currentSlide.value = nextSlide)
 
-    const galleryConfig = {
-      itemsToShow: 1,
-      wrapAround: true,
-      slideEffect: 'fade' as const,
-      mouseDrag: false,
-      touchDrag: false,
-      height: 417,
-    }
-    const thumbnailsConfig = {
-      height: 80,
-      itemsToShow: 6,
-      wrapAround: true,
-      touchDrag: true,
-      gap: 10,
-    }
+  const galleryConfig = {
+    itemsToShow: 1,
+    wrapAround: true,
+    slideEffect: 'fade' as const,
+    mouseDrag: false,
+    touchDrag: false,
+    height: 417,
+  }
+  
+  const thumbnailsConfig = {
+    height: 80,
+    itemsToShow: 6,
+    wrapAround: true,
+    touchDrag: true,
+    gap: 10,
+  }
 
-    const store = useStore()
-    const route = useRoute()
-    const product = computed(() => store.products.find(p => p.key === route.params.product_key))
-    const galleryImages = computed(() => product.value?.images)
+  // Store'u güvenli şekilde kullan
+  const store = useStore()
+  
+  // Route'u güvenli şekilde kullan
+  const route = useRoute()
+  
+  const product = computed(() => {
+    if (!store.products || !route.params.product_key) return null
+    return store.products.find(p => p.key === route.params.product_key)
+  })
+  
+  const galleryImages = computed(() => product.value?.images)
+
+  // SEO meta tags - basitleştirilmiş
+  definePageMeta({
+    layout: 'default',
+    title: 'Ürün Detayı - Legendary Tente | İzmir',
+    meta: [
+      {
+        name: 'description',
+        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+      },
+      {
+        name: 'keywords',
+        content: 'tente izmir, pergola izmir, cam sistemleri izmir, tente fiyatları, pergola fiyatları'
+      },
+      {
+        name: 'author',
+        content: 'Legendary Tente'
+      },
+      {
+        name: 'robots',
+        content: 'index, follow'
+      },
+      {
+        property: 'og:title',
+        content: 'Ürün Detayı - Legendary Tente'
+      },
+      {
+        property: 'og:description',
+        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+      },
+      {
+        property: 'og:type',
+        content: 'product'
+      },
+      {
+        property: 'og:url',
+        content: 'https://legendarytente.com/product-detail'
+      },
+      {
+        property: 'og:image',
+        content: 'https://legendarytente.com/default-product-image.jpg'
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:title',
+        content: 'Ürün Detayı - Legendary Tente'
+      },
+      {
+        name: 'twitter:description',
+        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://legendarytente.com/default-product-image.jpg'
+      },
+      {
+        name: 'canonical',
+        content: 'https://legendarytente.com/product-detail'
+      }
+    ]
+  })
   </script>
   
   <style scoped>
@@ -169,33 +228,31 @@
   .animate-slide-in-right { animation: slide-in-right 1s cubic-bezier(.68,-0.55,.27,1.55); }
   .animate-bounce-in { animation: bounce-in 0.7s cubic-bezier(.68,-0.55,.27,1.55); }
 
-img {
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.gallery-image {
-  border-radius: 16px;
-}
+  .gallery-image {
+    border-radius: 16px;
+  }
 
-#thumbnails {
-  margin-top: 10px;
-}
+  #thumbnails {
+    margin-top: 10px;
+  }
 
-.thumbnail {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease-in-out;
-}
+  .thumbnail {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+  }
 
-.thumbnail.is-active,
-.thumbnail:hover {
-  opacity: 1;
-}
-
-
+  .thumbnail.is-active,
+  .thumbnail:hover {
+    opacity: 1;
+  }
   </style>

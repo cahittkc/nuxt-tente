@@ -1,7 +1,5 @@
 import { defineStore } from 'pinia'
 
-
-
 export const useStore = defineStore('store', {
     state : () => ({
         categories : [
@@ -52,8 +50,18 @@ export const useStore = defineStore('store', {
                 title: 'Standart Blockout Pergola',
                 category: 'pergola',
                 key : 'standart_blockout_pergola',
-                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-                images : [],
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola1.png',
+                images : [
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola5.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola6.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola7.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola8.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola9.png',
+                ],
                 properties : [
                   'Alüminyum lamellerin tamamen kapanmasıyla %100 ışık ve su yalıtımı sağlar.',
                   'Uzaktan kumanda veya akıllı sistemlerle kontrol edilen, motorlu lamel sistemiyle çalışır.',
@@ -82,9 +90,14 @@ export const useStore = defineStore('store', {
                   'Minimalist çizgilere sahip, mimari yapıya uyumlu bir görünüm sunar.',
                   'Tavan altına veya raylara entegre LED sistemleriyle gece kullanımı desteklenebilir.'
                 ],
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolin_rool1.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolin_roof2.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola5.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola6.png',
                 ],
               },
               {
@@ -92,13 +105,13 @@ export const useStore = defineStore('store', {
                 title: 'Bioklimatik Pergola',
                 category: 'pergola',
                 key : 'bio_klimatik_pergola',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik1.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik4.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik5.webp'
-                ],
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola4.png',
+                  ],
                 properties : [
                   'Tavan lamelleri kendi ekseninde dönebilir; güneş, rüzgar ve yağmura karşı ayarlanabilir koruma sağlar.',
                   'Lamellerin açısı ayarlanarak doğal hava sirkülasyonu ve ışık geçirgenliği sağlanır.',
@@ -113,12 +126,11 @@ export const useStore = defineStore('store', {
                 title: 'Çatı Zip Perde',
                 category: 'teknik_tekstil_perdeler',
                 key : 'cati_zip_perde',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/catipzipperde4.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/catizipperde1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/catizipperde3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/catizipperdemain.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/catipzipperde2.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde2.png',
                 ],
                 properties : [
                   'Özel kılavuz raylar içinde gergin duran kumaş, sarkma yapmadan düz bir görünüm sunar.',
@@ -135,12 +147,13 @@ export const useStore = defineStore('store', {
                 title: 'Dikey Zip Perde',
                 category: 'teknik_tekstil_perdeler',
                 key : 'dikey_zip_perde',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikeyzipperde3.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikeyzipperde1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikeyzipperde2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikeyzipperde4.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikeyzipperdemain.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip5.png',
                 ],
                 properties : [
                   'Kumaş, özel fermuarlı (zip) raylar içinde kayar; rüzgara karşı yüksek dayanım sağlar.',
@@ -157,8 +170,13 @@ export const useStore = defineStore('store', {
                 title: 'Yatay Zip Perde',
                 category: 'teknik_tekstil_perdeler',
                 key : 'yatay_zip_perde',
-                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
-                images : [],
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde1.png',
+                images : [
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde4.png',
+                ],
                 properties : [
                   'Kumaş, özel zip raylar içinde yatay (sağa veya sola) şekilde hareket eder.',
                   'Uzaktan kumanda ile motorlu kullanım veya manuel opsiyonları mevcuttur.',
@@ -174,12 +192,12 @@ export const useStore = defineStore('store', {
                 title: 'Kasetli Tente',
                 category: 'tente',
                 key : 'kasetli_tente',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetlitente3.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetlitente1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetlitente2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetlitente4.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetlitentemain.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente4.png',
                 ],
                 properties : [
                   'Kumaş ve mekanizma kapandığında alüminyum kasanın içine girer; dış etkenlerden tamamen korunur.',
@@ -196,8 +214,11 @@ export const useStore = defineStore('store', {
                 title: 'Cam Balkon Sistemi',
                 category: 'cam_sistemleri',
                 key : 'cam_balkon_sistemi',
-                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-                images : [],
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png',
+                images : [
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon2.png',
+                ],
                 properties : [
                   'Cam paneller yana kayarak ya da katlanarak açılabilir; tamamen açıldığında açık balkon hissi verir.',
                   'Balkonunuzu dört mevsim kullanmanıza olanak tanır; rüzgar, toz ve yağmurdan korur.',
@@ -213,9 +234,14 @@ export const useStore = defineStore('store', {
                 title: 'Giyotin Sistemi',
                 category: 'cam_sistemleri',
                 key : 'giyotin_sistemi',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_Cam2.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
                 images : [
-                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png'
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam2.png',
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam3.png',
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam4.png',
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam5.png',
+                    'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam6.png',
                 ],
                 properties : [
                   'Camlar motorlu mekanizma ile yukarı-aşağı hareket eder; istenilen seviyede durdurulabilir.',
@@ -232,8 +258,12 @@ export const useStore = defineStore('store', {
                 title: 'Branda Uygulaması',
                 category: 'branda_uygulamalari',
                 key : 'branda_uygulamalari',
-                img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-                images : [],
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png',
+                images : [
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi3.png',
+                ],
                 properties : [
                   'Güneş, yağmur ve dış etkenlere karşı koruma sağlayan özel PVC veya akrilik brandalar kullanılır.',
                   'Sabit, kayar, açılır-kapanır ya da sarılır şekilde farklı yapılarla uygulanabilir.',
@@ -249,9 +279,15 @@ export const useStore = defineStore('store', {
                 title: 'Çadır',
                 category: 'cadir',
                 key : 'cadir',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_Cam2.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir5.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir6.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir7.png',
                 ],
                 properties : []
               },
@@ -260,17 +296,11 @@ export const useStore = defineStore('store', {
                 title: 'Karoser Uygulamaları',
                 category: 'karoser_uygulamalari',
                 key : 'karoser_uygulamalari',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda10.jpg',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda1.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda2.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda3.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda4.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda5.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda6.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda7.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda8.jpg',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda9.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama3.png',
                 ],
                 properties : [
                   'Araç veya yapıların belirli bölümlerine özel ölçülerde gerilmiş, koruyucu branda uygulamalarıdır.',
@@ -287,14 +317,13 @@ export const useStore = defineStore('store', {
                 title: 'Mafsallı Tente',
                 category: 'tente',
                 key : 'mafsalli_tente',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitentemain.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente4.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente5.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsallitente6.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente5.png',
                 ],
                 properties : [
                   'Tentenin açılıp kapanmasını sağlayan özel mafsallı kollar, kolay kullanım sunar.',
@@ -311,10 +340,13 @@ export const useStore = defineStore('store', {
                 title: 'Wintent Tente',
                 category: 'tente',
                 key : 'wintent_tente',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent2.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente5.png',
                 ],
                 properties : [
                   'Soğuk havalarda dış mekan kullanımını mümkün kılan dayanıklı tente sistemidir.',
@@ -331,12 +363,13 @@ export const useStore = defineStore('store', {
                 title: 'Perde Cam Sistemi',
                 category: 'cam_sistemleri',
                 key : 'perde_cam',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam_main.png',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam2.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_Cam4.png'
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam5.png',
                 ],
                 properties : [
                   'Paneller birbirine bağlıdır ve katlanarak yana doğru açılır, tamamen açılabilir.',

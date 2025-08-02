@@ -1,2 +1,18 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://legendarytente.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important pages
+Allow: /
+Allow: /products
+Allow: /contact
+Allow: /product-detail/
+
+# Crawl delay (optional)
+Crawl-delay: 1

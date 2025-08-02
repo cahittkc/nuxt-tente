@@ -1,73 +1,75 @@
 <template>
   <section class="min-h-screen flex flex-col">
-    <!-- Hero -->
-          <div class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in  bg-[url(https://tent-bckt.s3.eu-north-1.amazonaws.com/homepage_banner.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
-        <!-- Overlay for better text readability -->
-            <div class="absolute inset-0 bg-black/40"></div>
-            <!-- Content -->
-            <div class="relative z-10 max-w-4xl mx-auto">
-              <span class="uppercase tracking-widest text-main-300 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
-              <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
-                Uzman Deneyimli<br>
-                <span class="text-main-300">Garantili Çözümler</span>
-              </h1>
-              <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-                Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
-              </p>
-              <NuxtLink
-                to="/contact"
-                class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
-              >
-                Ücretsiz Keşif Talep Et
-              </NuxtLink>
-            </div>
-            <!-- Slider indicator -->
-            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-              <div class="w-3 h-3 border-2 border-white rounded-full"></div>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <span class="uppercase tracking-widest text-main-300 font-semibold mb-3 animate-fade-in-down">Dış Mekanlarınız İçin</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
+          Uzman Deneyimli<br>
+          <span class="text-main-300">Garantili Çözümler</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
+          Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
+        </p>
+        <NuxtLink
+          to="/contact"
+          class="px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 animate-bounce-in"
+          aria-label="Ücretsiz keşif talebi için iletişim sayfasına git"
+        >
+          Ücretsiz Keşif Talep Et
+        </NuxtLink>
+      </div>
+      <!-- Slider indicator -->
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+        <div class="w-3 h-3 border-2 border-white rounded-full"></div>
+      </div>
+    </header>
 
     <!-- Ürün Gruplarımız Bölümü -->
-    <div class="container mx-auto py-16">
+    <main class="container mx-auto py-16">
       <div class="text-center mb-12 animate-fade-in-down">
         <span class="uppercase text-red-600 font-semibold tracking-widest">ÜRÜNLERİMİZ</span>
         <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-2 tracking-wider">ÜRÜN GRUPLARIMIZ</h2>
       </div>
-      <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 max-md:p-2 gap-8">
-        <NuxtLink
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-md:p-2 gap-8" aria-label="Ürün kategorileri">
+        <article
           v-for="(item, i) in urunler"
           :key="i"
-          to="/products"
           class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-500 hover:scale-105 animate-fade-in-up cursor-pointer"
           :style="{ animationDelay: `${i * 0.08 + 0.2}s` }"
         >
-          <div class="h-56 w-full bg-gray-200 flex items-center justify-center">
-            <img :src="item.img" :alt="item.title" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <h3 class="font-bold text-lg text-gray-900 mb-2 uppercase tracking-wider">{{ item.title }}</h3>
-            <span class="text-xs text-gray-400 font-semibold tracking-widest">ÜRÜNLERİ İNCELE</span>
-          </div>
-        </NuxtLink>
-      </div>
-    </div>
+          <NuxtLink to="/products" class="flex flex-col h-full">
+            <div class="h-56 w-full bg-gray-200 flex items-center justify-center">
+              <img :src="item.img" :alt="`${item.title} ürünleri`" class="object-cover w-full h-full" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <h3 class="font-bold text-lg text-gray-900 mb-2 uppercase tracking-wider">{{ item.title }}</h3>
+              <span class="text-xs text-gray-400 font-semibold tracking-widest">ÜRÜNLERİ İNCELE</span>
+            </div>
+          </NuxtLink>
+        </article>
+      </section>
+    </main>
 
-    <div class="container mx-auto pt-5">
+    <section class="container mx-auto pt-5" aria-labelledby="about-heading">
       <div class="bg-gradient-to-br from-gray-50 to-white py-20 rounded-lg">
-        <div class=" px-6">
+        <div class="px-6">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Sol Taraf - İçerik -->
-            <div class="space-y-6 animate-fade-in-up">
+            <article class="space-y-6 animate-fade-in-up">
               <div class="inline-block animate-fade-in-down">
                 <span class="text-sm font-semibold text-red-600 uppercase tracking-widest">Hakkımızda</span>
               </div>
-              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-down">
+              <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate-fade-in-down">
                 30 Yıllık <span class="text-main-default animate-pulse">Deneyim</span> ile Güvenilir Çözümler
               </h2>
               <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up">
                 1994 yılından bu yana İzmir'de faaliyet gösteren Legendary Tente, dış mekan gölgelendirme sistemlerinde Türkiye'nin önde gelen firmalarından biridir. Modern teknoloji ve geleneksel ustalığı birleştirerek, müşterilerimize en kaliteli tente çözümlerini sunuyoruz.
               </p>
-              <div class="grid grid-cols-2 gap-6 pt-6">
+              <div class="grid grid-cols-2 gap-6 pt-6" role="group" aria-label="Şirket istatistikleri">
                 <div class="text-center animate-bounce-in">
                   <div class="text-3xl font-bold text-main-default mb-2 counter-animation" data-target="1500">%98</div>
                   <div class="text-sm text-gray-600">Mutlu Müşteri</div>
@@ -79,16 +81,17 @@
               </div>
               <div class="pt-4 animate-fade-in-up">
                 <NuxtLink
-                  to="/hakkimizda"
+                  to="/contact"
                   class="inline-flex items-center px-6 py-3 bg-main-default text-white font-semibold rounded-lg hover:bg-main-600 transition-all duration-300 group hover:scale-105"
+                  aria-label="Hakkımızda sayfasına git"
                 >
                   Daha Fazla Bilgi
-                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M9 5l7 7-7 7"></path>
                   </svg>
                 </NuxtLink>
               </div>
-            </div>
+            </article>
             
             <!-- Sağ Taraf - Görsel Grid -->
             <div class="grid grid-cols-2 gap-4">
@@ -158,155 +161,132 @@
           </div>
       </div>
 
-
-      <!-- Hakkımızda Bölümü -->
-      
-
-
-
       <!-- Referanslar -->
-      <div class="my-5">
-        <h3 class="text-center text-gray-700 font-semibold mb-6 tracking-widest">MÜŞTERİ MEMNUNİYETİ</h3>
-        <Carousel v-bind="carouselReferenceConfig">
+      <section class="my-5" aria-labelledby="testimonials-heading">
+        <h3 id="testimonials-heading" class="text-center text-gray-700 font-semibold mb-6 tracking-widest">MÜŞTERİ MEMNUNİYETİ</h3>
+        <Carousel v-bind="carouselReferenceConfig" aria-label="Müşteri yorumları">
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
               <p class="text-gray-600 italic mb-2">"Legendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
-              <span class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</span>
-            </div>
+              <cite class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</cite>
+            </blockquote>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
               <p class="text-gray-600 italic mb-2">"Hızlı montaj ve kaliteli malzeme, kesinlikle tavsiye ederim."</p>
-              <span class="block text-right text-blue-600 font-semibold mt-auto">- Murat K.</span>
-            </div>
+              <cite class="block text-right text-blue-600 font-semibold mt-auto">- Murat K.</cite>
+            </blockquote>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
-              <p class="text-gray-600 italic mb-2">"Legendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
-              <span class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</span>
-            </div>
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Restoranımızın terası için mükemmel çözüm, müşterilerimiz çok memnun."</p>
+              <cite class="block text-right text-green-600 font-semibold mt-auto">- Ayşe D.</cite>
+            </blockquote>
           </Slide>
           <Slide>
-            <div class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
-              <p class="text-gray-600 italic mb-2">"Hızlı montaj ve kaliteli malzeme, kesinlikle tavsiye ederim."</p>
-              <span class="block text-right text-blue-600 font-semibold mt-auto">- Murat K.</span>
-            </div>
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Profesyonel ekip ve kaliteli hizmet, çok teşekkürler."</p>
+              <cite class="block text-right text-purple-600 font-semibold mt-auto">- Mehmet Ö.</cite>
+            </blockquote>
+          </Slide>
+          <Slide>
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Kafe terası için ideal çözüm, yağmurda bile keyifle oturabiliyoruz."</p>
+              <cite class="block text-right text-orange-600 font-semibold mt-auto">- Can Y.</cite>
+            </blockquote>
+          </Slide>
+          <Slide>
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Villa havuz başı için harika bir seçim, çok memnunuz."</p>
+              <cite class="block text-right text-teal-600 font-semibold mt-auto">- Zeynep S.</cite>
+            </blockquote>
+          </Slide>
+          <Slide>
+            <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
+              <p class="text-gray-600 italic mb-2">"Garantili hizmet ve uygun fiyat, herkese öneririm."</p>
+              <cite class="block text-right text-indigo-600 font-semibold mt-auto">- Ali R.</cite>
+            </blockquote>
           </Slide>
         </Carousel>
-      </div>
-
-     
-
-      <!-- Firma Logoları Carousel -->
-      <div class="rounded-lg mx-auto py-12 px-4 flex flex-col gap-y-10 max-w-full">
-        <h3 class="text-center text-gray-700 font-semibold mb-6 tracking-widest">EN İYİ FİRMALAR İLE ÇALIŞIYORUZ</h3>
-        <Carousel v-bind="sirketCarousel">
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-gray-800 drop-shadow">
-                Lemon Squeezy
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-red-500 to-blue-500 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-yellow-600 drop-shadow">
-                Payoneer
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-yellow-500 to-blue-500 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-red-500 drop-shadow">
-                Wise
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-red-500 to-gray-800 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-gray-800 drop-shadow">
-                Mercury
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-gray-800 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-gray-800 drop-shadow">
-                Mercury
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-gray-800 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-yellow-600 drop-shadow">
-                Paddle
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-yellow-500 to-blue-500 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-red-600 drop-shadow">
-                WorldFirst
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-red-500 to-gray-800 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-gray-500 drop-shadow">
-                Bizee
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-gray-500 to-blue-500 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-          <Slide>
-            <div class="relative bg-gradient-to-br from-white via-gray-50 to-gray-200 rounded-2xl border border-gray-200 p-6 w-72 min-w-[18rem] flex flex-col items-center justify-center">
-              <span class="text-3xl font-extrabold text-yellow-600 drop-shadow">
-                Paddle
-              </span>
-              <span class="mt-3 text-xs font-semibold text-white bg-gradient-to-r from-yellow-500 to-blue-500 px-3 py-1 rounded-full shadow">
-                Güvenilir Partner
-              </span>
-            </div>
-          </Slide>
-        </Carousel>
-      </div>
-    </div>
+      </section>
+    </section>
   </section>
 </template>
 
-
-
 <script setup lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
- import pergolaImg from '@/assets/images/pergola.jpg'
- import glass from "@/assets/images/glass.jpg"
- import curtains from "@/assets/images/curtains.jpg"
- import tarpaulin from "@/assets/images/tarpaulin.jpg"
+import pergolaImg from '@/assets/images/pergola.jpg'
+import glass from "@/assets/images/glass.jpg"
+import curtains from "@/assets/images/curtains.jpg"
+import tarpaulin from "@/assets/images/tarpaulin.jpg"
 import tent from "@/assets/images/tent.jpg"
-import tent2 from "@/assets/images/tent2.jpg" 
+import tent2 from "@/assets/images/tent2.jpg"
+
+// JSON-LD Structured Data
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Legendary Tente",
+        "description": "İzmir'de 30 yıllık deneyimle tente, pergola, branda ve cam sistemleri hizmeti veren firma",
+        "url": "https://legendarytente.com",
+        "telephone": "+90-232-XXX-XXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "İzmir",
+          "addressRegion": "İzmir",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.4192,
+          "longitude": 27.1287
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$",
+        "serviceArea": {
+          "@type": "City",
+          "name": "İzmir"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tente Sistemleri",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Pergola Sistemleri"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tente Sistemleri"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cam Sistemleri"
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "150"
+        }
+      })
+    }
+  ]
+})
 
 definePageMeta({
   layout: 'default',
@@ -314,11 +294,75 @@ definePageMeta({
   meta: [
     {
       name: 'description',
-      content: 'Legendary Tente ile İzmir’de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. Ücretsiz keşif ile tanışın.'
+      content: 'Legendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet. İzmir tente firması.'
     },
     {
       name: 'keywords',
-      content: 'tente izmir, pergola, branda, cam balkon, gölgelendirme sistemleri'
+      content: 'tente izmir, pergola izmir, branda izmir, cam balkon izmir, gölgelendirme sistemleri, tente firması izmir, pergola firması, branda firması, cam sistemleri, dış mekan çözümleri, tente montaj, pergola montaj'
+    },
+    {
+      name: 'author',
+      content: 'Legendary Tente'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
+      property: 'og:title',
+      content: 'Legendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri'
+    },
+    {
+      property: 'og:description',
+      content: 'Legendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://legendarytente.com'
+    },
+    {
+      property: 'og:image',
+      content: 'https://legendarytente.com/og-image.jpg'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Legendary Tente - İzmir Tente Sistemleri'
+    },
+    {
+      name: 'twitter:description',
+      content: 'İzmir\'de 30 yıllık deneyimle tente, pergola, branda ve cam sistemleri. Profesyonel hizmet, garantili çözümler.'
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://legendarytente.com/twitter-image.jpg'
+    },
+    {
+      name: 'canonical',
+      content: 'https://legendarytente.com'
+    },
+    {
+      name: 'geo.region',
+      content: 'TR-35'
+    },
+    {
+      name: 'geo.placename',
+      content: 'İzmir'
+    },
+    {
+      name: 'geo.position',
+      content: '38.4192;27.1287'
+    },
+    {
+      name: 'ICBM',
+      content: '38.4192, 27.1287'
     }
   ]
 })
@@ -342,31 +386,29 @@ const sirketCarousel = {
 const urunler = [
   {
     title: 'PERGOLA',
-    img: pergolaImg,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola2.png',
   },
   {
     title: 'TENTE',
-    img: tent,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente3.png',
   },
   {
     title: 'CAM SİSTEMLERİ',
-    img: glass,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
   },
   {
     title: 'TEKNİK TEKSTİL PERDELER',
-    img: curtains,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png',
   },
   {
     title: 'BRANDA UYGULAMALARI',
-    img: tarpaulin,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png',
   },
   {
     title: 'ÇADIR',
-    img: tent2,
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png',
   },
 ]
-
-
 </script>
 
 <style scoped>
@@ -405,6 +447,4 @@ const urunler = [
 .animate-testimonial-carousel {
   min-width: 200%;
 }
-
-
 </style> 

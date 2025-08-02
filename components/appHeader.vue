@@ -6,7 +6,12 @@
         
         <div class="relative">
           <div class="w-10 h-10 bg-gradient-to-br  rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-200 group-hover:scale-105">
-            <img src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
+            <transition name="fade-logo" mode="out-in">
+              <img v-if="showLogo === 'tente'" key="tente" src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
+              <div v-else key="dogruyol" class="flex items-center justify-center rounded-lg overflow-hidden min-w-[150px] -ml-[55px]">
+                <img src="../assets/images/dogruyol_logo.jpeg" alt="Legendary Dogruyol Logo" class="max-w-[150px] h-[60px]  object-cover rounded-lg" loading="lazy">
+              </div>
+            </transition>
           </div>
         </div>
         <div class="flex flex-col ml-3">
@@ -116,17 +121,25 @@
 const isMobileMenuOpen = ref(false)
 const isScrolled = ref(false)
 
+const showLogo = ref<'tente' | 'dogruyol'>('tente')
+
 // Scroll event listener
 onMounted(() => {
   const handleScroll = () => {
     isScrolled.value = window.scrollY > 200
   }
-  
+
+  // Logo döngüsü başlat
+  const logoInterval = setInterval(() => {
+    showLogo.value = showLogo.value === 'tente' ? 'dogruyol' : 'tente'
+  }, 5000)
+
   window.addEventListener('scroll', handleScroll)
-  
+
   // Cleanup
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
+    clearInterval(logoInterval)
   })
 })
 
@@ -137,4 +150,17 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
+
 </script>
+
+<style scoped>
+.fade-logo-enter-active, .fade-logo-leave-active {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-logo-enter-from, .fade-logo-leave-to {
+  opacity: 0;
+}
+.fade-logo-enter-to, .fade-logo-leave-from {
+  opacity: 1;
+}
+</style>

@@ -155,7 +155,7 @@ const closeMobileMenu = () => {
 
 <style scoped>
 .fade-logo-enter-active, .fade-logo-leave-active {
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .fade-logo-enter-from, .fade-logo-leave-to {
   opacity: 0;

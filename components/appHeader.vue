@@ -5,7 +5,7 @@
       <NuxtLink to="/" class="flex items-center gap-3 group" aria-label="Ana sayfaya git">
         
         <div class="relative">
-          <div class="w-10 h-10 bg-gradient-to-br  rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-200 group-hover:scale-105">
+          <div class="w-10 h-10   rounded-xl flex items-center justify-center  transition-all duration-200 group-hover:scale-105">
             <transition name="fade-logo" mode="out-in">
               <img v-if="showLogo === 'tente'" key="tente" src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
               <img v-else key="dogruyol" src="../assets/images/dogruyol_son.png" alt="Legendary Dogruyol Logo" class="max-w-[150px] h-20  object-cover rounded-lg -ml-[35px]" loading="lazy">

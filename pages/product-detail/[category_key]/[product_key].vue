@@ -73,14 +73,14 @@
           </div>
         </section>
         <!-- Sağ: Başlık, öne çıkanlar, garanti, buton -->
-        <article class="animate-slide-in-right">
+        <article class="animate-slide-in-right flex flex-col">
           <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">{{ product?.title || 'Ürün Detayı' }}</h3>
           <ul class="text-gray-700 space-y-2 mb-6 list-disc list-inside animate-fade-in-up" role="list">
             <li v-for="property in product?.properties || []" :key="property" role="listitem">{{ property }}</li>
           </ul>
           <NuxtLink
             to="/contact"
-            class="block w-full text-center px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 hover:scale-105"
+            class="block mt-auto w-full text-center px-8 py-4 bg-main-default text-white rounded-lg font-bold shadow-lg hover:bg-main-600 transition-all duration-300 hover:scale-105"
             aria-label="Bu ürün için teklif al"
           >
             Teklif Al

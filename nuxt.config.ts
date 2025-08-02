@@ -3,7 +3,10 @@ export default defineNuxtConfig({
   devServer : {
     port : 8080
   },
-
+  ssr : true,
+  nitro: {
+    preset: 'static'
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   css: ['./assets/css/main.css'],

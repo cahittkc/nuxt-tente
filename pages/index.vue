@@ -215,12 +215,6 @@
 
 <script setup lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import pergolaImg from '@/assets/images/pergola.jpg'
-import glass from "@/assets/images/glass.jpg"
-import curtains from "@/assets/images/curtains.jpg"
-import tarpaulin from "@/assets/images/tarpaulin.jpg"
-import tent from "@/assets/images/tent.jpg"
-import tent2 from "@/assets/images/tent2.jpg"
 
 // JSON-LD Structured Data
 useHead({

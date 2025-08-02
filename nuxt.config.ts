@@ -19,6 +19,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'tr'
+      },
       title: 'Legendary Tente',
       meta: [
         { charset: 'utf-8' },

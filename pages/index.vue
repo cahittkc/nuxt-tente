@@ -481,6 +481,10 @@ const sirketCarousel = {
 
 const urunler = [
   {
+    title: 'Karoser Uygulamaları & Dorse Kayar Perde Sistemleri ',
+    img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda10.jpg',
+  },
+  {
     title: 'PERGOLA',
     img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola2.png',
   },

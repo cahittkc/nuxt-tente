@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useStore = defineStore('store', {
     state : () => ({
+        isLoading: false,
         categories : [
             
             {
@@ -413,4 +414,18 @@ export const useStore = defineStore('store', {
               }
         ]
     }),
+    getters: {
+        getIsLoading: (state) => state.isLoading
+    },
+    actions: {
+        setLoading(loading: boolean) {
+            this.isLoading = loading
+        },
+        showLoading() {
+            this.isLoading = true
+        },
+        hideLoading() {
+            this.isLoading = false
+        }
+    }
 })

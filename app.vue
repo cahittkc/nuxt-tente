@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- Global Loading Indicator -->
+    <LoadingIndicator :is-visible="store.getIsLoading" />
+    
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

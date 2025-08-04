@@ -556,21 +556,6 @@ const urunler = [
 
 const calistigimisFirmalar = [
   {
-    name: 'Mega Üniversite',
-    logo: 'MÜ',
-    sector: 'Eğitim'
-  },
-  {
-    name: 'City Belediyesi',
-    logo: 'CB',
-    sector: 'Kamu'
-  },
-  {
-    name: 'Metro Belediyesi',
-    logo: 'MB',
-    sector: 'Kamu'
-  },
-  {
     name: 'Grand Hotel',
     logo: 'GH',
     sector: 'Turizm'
@@ -589,11 +574,6 @@ const calistigimisFirmalar = [
     name: 'Business Center',
     logo: 'BC',
     sector: 'İş Merkezi'
-  },
-  {
-    name: 'Tech Üniversitesi',
-    logo: 'TÜ',
-    sector: 'Eğitim'
   },
   {
     name: 'Royal Hotel',
@@ -629,11 +609,6 @@ const calistigimisFirmalar = [
     name: 'Smart Office',
     logo: 'SO',
     sector: 'İş Merkezi'
-  },
-  {
-    name: 'Urban Mall',
-    logo: 'UM',
-    sector: 'Perakende'
   },
   {
     name: 'Seaside Hotel',

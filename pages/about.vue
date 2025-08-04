@@ -117,7 +117,7 @@
           <div class="text-main-100">Yıllık Deneyim</div>
         </div>
         <div class="animate-bounce-in" style="animation-delay: 0.2s">
-          <div class="text-4xl font-bold mb-2">1500+</div>
+          <div class="text-4xl font-bold mb-2">500+</div>
           <div class="text-main-100">Mutlu Müşteri</div>
         </div>
         <div class="animate-bounce-in" style="animation-delay: 0.3s">

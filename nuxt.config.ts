@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'tr'
       },
-      title: 'DYLegendary Tente',
+      title: 'DYLegendary Tente | Lojistik',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

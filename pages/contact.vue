@@ -99,6 +99,53 @@
         </form>
       </section>
     </div>
+
+    <!-- Harita Bölümü -->
+    <section class="py-16 bg-gray-50 mt-4" aria-labelledby="map-heading">
+      <div class=" px-4">
+        <h3 id="map-heading" class="text-2xl font-bold text-gray-900 mb-8 text-center">Konumumuz</h3>
+        <div class="mx-auto">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9 h-96">
+              <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.4670709964307!2d27.257290077059142!3d38.43067917410574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b96350ecac268f%3A0xa9b1be167b11831d!2sKemalpa%C5%9Fa%2C%207081.%20Sk.%20No%3A19%2C%2035060%20Bornova%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1754311691190!5m2!1str!2str"
+                 width="100%" 
+                 height="100%" 
+                 style="border:0;" 
+                 :allowfullscreen="true" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer-when-downgrade"
+                 title="DYLegendary Tente Konum Haritası"
+                 aria-label="İzmir konumu gösteren Google Maps haritası"
+               ></iframe>
+            </div>
+            <div class="p-6 bg-white">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2">Adres Bilgileri</h4>
+                  <p class="text-gray-700">Kemalpaşa, 7081. Sk. No:19, 35060 Bornova/İzmir</p>
+                  <p class="text-gray-600 text-sm mt-1">Detaylı adres bilgisi için lütfen bizimle iletişime geçin.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a 
+                    href="https://www.google.com/maps/place/Kemalpa%C5%9Fa,+7081.+Sk.+No:19,+35060+Bornova%2F%C4%B0zmir/@38.4306792,27.2572901,17z/data=!3m1!4b1!4m6!3m5!1s0x14b96350ecac268f:0xa9b1be167b11831d!8m2!3d38.430675!4d27.259865!16s%2Fg%2F11csch7v4t?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center px-4 py-2 bg-main-default text-white rounded-lg hover:bg-main-600 transition-colors duration-300 text-sm font-medium"
+                    aria-label="Google Maps'te konumu görüntüle"
+                  >
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Haritada Görüntüle
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 

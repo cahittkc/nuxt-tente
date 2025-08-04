@@ -128,7 +128,7 @@
                 </div>
                 <div class="flex flex-col sm:flex-row gap-3">
                   <a 
-                    href="https://www.google.com/maps/place/Kemalpa%C5%9Fa,+7081.+Sk.+No:19,+35060+Bornova%2F%C4%B0zmir/@38.4306792,27.2572901,17z/data=!3m1!4b1!4m6!3m5!1s0x14b96350ecac268f:0xa9b1be167b11831d!8m2!3d38.430675!4d27.259865!16s%2Fg%2F11csch7v4t?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" 
+                    href="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d195.34420464322176!2d27.2592137250268!3d38.42975032017161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDI1JzQ3LjAiTiAyN8KwMTUnMzMuNyJF!5e0!3m2!1str!2str!4v1754316161002!5m2!1str!2str" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     class="inline-flex items-center justify-center px-4 py-2 bg-main-default text-white rounded-lg hover:bg-main-600 transition-colors duration-300 text-sm font-medium"

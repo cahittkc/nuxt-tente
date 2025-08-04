@@ -158,7 +158,7 @@
 <script setup>
 // SEO Meta Tags
 useHead({
-  title: 'Hakkımızda - DYDYLegendary Tente | 30 Yıllık Deneyim',
+  title: 'Hakkımızda -DYLegendary Tente | 30 Yıllık Deneyim',
   meta: [
     {
       name: 'description',
@@ -255,7 +255,8 @@ useHead({
           "Cam Balkon",
           "Zip Perde",
           "Dış Mekan Gölgelendirme",
-          "Branda Uygulamaları"
+          "Branda Uygulamaları",
+          "Karoser ve Dorse Hizmetleri"
         ]
       })
     }

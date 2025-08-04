@@ -78,8 +78,61 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-// JSON-LD Structured Data for Products
+// SEO Meta Tags
 useHead({
+  title: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir',
+  meta: [
+    {
+      name: 'description',
+      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler. Her mekâna uygun çözümler.'
+    },
+    {
+      name: 'keywords',
+      content: 'tente ürünleri izmir, pergola ürünleri, cam sistemleri ürünleri, dış mekan çözümleri, tente fiyatları, pergola fiyatları, cam balkon ürünleri, Dorse, Tente, Gölgelik, Jüt'
+    },
+    {
+      property: 'og:title',
+      content: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir'
+    },
+    {
+      property: 'og:description',
+      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://DYLegendarytente.com/products'
+    },
+    {
+      property: 'og:image',
+      content: 'https://DYLegendarytente.com/assets/images/products_banner_last.jpg'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir'
+    },
+    {
+      name: 'twitter:description',
+      content: 'İzmir\'de pergola, tente, cam sistemleri ve dış mekan çözümleri. Kaliteli ürünler, uygun fiyatlar.'
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://DYLegendarytente.com/assets/images/products_banner_last.jpg'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://DYLegendarytente.com/products'
+    }
+  ],
   script: [
     {
       type: 'application/ld+json',
@@ -114,69 +167,6 @@ useHead({
           }
         ]
       })
-    }
-  ]
-})
-
-definePageMeta({
-  layout: 'default',
-  title: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir',
-  meta: [
-    {
-      name: 'description',
-      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler. Her mekâna uygun çözümler.'
-    },
-    {
-      name: 'keywords',
-      content: 'tente ürünleri izmir, pergola ürünleri, cam sistemleri ürünleri, dış mekan çözümleri, tente fiyatları, pergola fiyatları, cam balkon ürünleri'
-    },
-    {
-      name: 'author',
-      content: 'DYLegendary Tente'
-    },
-    {
-      name: 'robots',
-      content: 'index, follow'
-    },
-    {
-      property: 'og:title',
-      content: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir'
-    },
-    {
-      property: 'og:description',
-      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler.'
-    },
-    {
-      property: 'og:type',
-      content: 'website'
-    },
-    {
-      property: 'og:url',
-      content: 'https://DYLegendarytente.com/products'
-    },
-    {
-      property: 'og:image',
-      content: 'https://DYLegendarytente.com/products-og-image.jpg'
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:title',
-      content: 'Ürünlerimiz - DYLegendary Tente'
-    },
-    {
-      name: 'twitter:description',
-      content: 'İzmir\'de pergola, tente, cam sistemleri ve dış mekan çözümleri. Kaliteli ürünler, uygun fiyatlar.'
-    },
-    {
-      name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/products-twitter-image.jpg'
-    },
-    {
-      name: 'canonical',
-      content: 'https://DYLegendarytente.com/products'
     }
   ]
 })

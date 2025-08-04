@@ -263,8 +263,61 @@
 <script setup lang="ts">
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-// JSON-LD Structured Data
+// SEO Meta Tags
 useHead({
+  title: 'DYLegendary Tente | İzmir Tente, Pergola, Cam Sistemleri - 30 Yıllık Deneyim',
+  meta: [
+    {
+      name: 'description',
+      content: 'İzmir\'de 30 yıllık deneyimle tente, pergola, cam sistemleri ve dış mekan gölgelendirme çözümleri. Kaliteli ürünler, profesyonel montaj, uygun fiyatlar.'
+    },
+    {
+      name: 'keywords',
+      content: 'tente izmir, pergola izmir, cam sistemleri izmir, dış mekan gölgelendirme, tente fiyatları, pergola fiyatları, cam balkon, Dorse, Tente, Gölgelik, Jüt'
+    },
+    {
+      property: 'og:title',
+      content: 'DYLegendary Tente | İzmir Tente, Pergola, Cam Sistemleri - 30 Yıllık Deneyim'
+    },
+    {
+      property: 'og:description',
+      content: 'İzmir\'de 30 yıllık deneyimle tente, pergola, cam sistemleri ve dış mekan gölgelendirme çözümleri. Kaliteli ürünler, profesyonel montaj.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://DYLegendarytente.com'
+    },
+    {
+      property: 'og:image',
+      content: 'https://DYLegendarytente.com/assets/images/home_page_banner_last.jpg'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'DYLegendary Tente | İzmir Tente, Pergola, Cam Sistemleri'
+    },
+    {
+      name: 'twitter:description',
+      content: 'İzmir\'de 30 yıllık deneyimle tente, pergola, cam sistemleri ve dış mekan gölgelendirme çözümleri.'
+    },
+    {
+      name: 'twitter:image',
+      content: 'https://DYLegendarytente.com/assets/images/home_page_banner_last.jpg'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://DYLegendarytente.com'
+    }
+  ],
   script: [
     {
       type: 'application/ld+json',
@@ -274,7 +327,7 @@ useHead({
         "name": "DYLegendary Tente",
         "description": "İzmir'de 30 yıllık deneyimle tente, pergola, branda, lojistik, dorse ve cam sistemleri hizmeti veren firma",
         "url": "https://DYLegendarytente.com",
-        "telephone": "+90-232-XXX-XXXX",
+        "telephone": "+90-541-928-54-87",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "İzmir",
@@ -286,7 +339,7 @@ useHead({
           "latitude": 38.4192,
           "longitude": 27.1287
         },
-        "openingHours": "Mo-Fr 08:00-18:00",
+        "openingHours": "Mo-Sa 08:30-18:30",
         "priceRange": "$$",
         "serviceArea": {
           "@type": "City",
@@ -352,32 +405,23 @@ useHead({
           "ratingValue": "4.8",
           "reviewCount": "150"
         },
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "30 Yıllık Sektör Deneyimi"
-          }
-        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+90-541-928-54-87",
+          "contactType": "customer service",
+          "availableLanguage": "Turkish"
+        },
         "knowsAbout": [
-          "Tente Sistemleri",
-          "Pergola Sistemleri", 
-          "Cam Sistemleri",
+          "Pergola",
+          "Tente",
+          "Cam Balkon",
+          "Zip Perde",
+          "Dış Mekan Gölgelendirme",
           "Branda Uygulamaları",
-          "Teknik Tekstil Perdeler",
-          "Çadır Sistemleri",
+          "Karoser ve Dorse Hizmetleri",
           "Dorse Sistemleri",
           "Gölgelik Sistemleri",
           "Jüt Kumaş Uygulamaları"
-        ],
-        "clientele": [
-          "Mega Üniversite",
-          "City Belediyesi",
-          "Tech Üniversitesi",
-          "Grand Hotel",
-          "Royal Hotel",
-          "Plaza AVM",
-          "Central Mall",
-          "Business Center"
         ]
       })
     }

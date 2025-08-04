@@ -103,59 +103,17 @@
 </template>
 
 <script setup lang="ts">
-// JSON-LD Structured Data for Contact Page
+// SEO Meta Tags
 useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "DYLegendary Tente İletişim",
-        "description": "İzmir'de tente, pergola ve cam sistemleri için iletişim. Teklif alın, sorularınızı sorun.",
-        "url": "https://DYLegendarytente.com/contact",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "DYLegendary Tente",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "İzmir",
-            "addressRegion": "İzmir",
-            "addressCountry": "TR"
-          },
-          "telephone": "+905551234567",
-          "email": "info@DYLegendarytente.com",
-          "openingHours": "Mo-Sa 08:30-18:30",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 38.4192,
-            "longitude": 27.1287
-          }
-        }
-      })
-    }
-  ]
-})
-
-definePageMeta({
-  layout: 'default',
   title: 'İletişim - DYLegendary Tente | İzmir Tente Firması',
   meta: [
     {
       name: 'description',
-      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: 0 555 123 45 67, E-posta: info@DYLegendarytente.com'
+      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: +90 541 928 54 87, E-posta: info@legendarytente.com'
     },
     {
       name: 'keywords',
-      content: 'tente firması izmir, pergola firması izmir, cam sistemleri izmir, tente teklif, pergola teklif, izmir tente iletişim, tente fiyatları izmir'
-    },
-    {
-      name: 'author',
-      content: 'DYLegendary Tente'
-    },
-    {
-      name: 'robots',
-      content: 'index, follow'
+      content: 'tente firması izmir, pergola firması izmir, cam sistemleri izmir, tente teklif, pergola teklif, izmir tente iletişim, tente fiyatları izmir, Dorse, Tente, Gölgelik, Jüt'
     },
     {
       property: 'og:title',
@@ -175,7 +133,7 @@ definePageMeta({
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/contact-og-image.jpg'
+      content: 'https://DYLegendarytente.com/assets/images/contact_banner_last.jpg'
     },
     {
       name: 'twitter:card',
@@ -183,7 +141,7 @@ definePageMeta({
     },
     {
       name: 'twitter:title',
-      content: 'İletişim - DYLegendary Tente'
+      content: 'İletişim - DYLegendary Tente | İzmir Tente Firması'
     },
     {
       name: 'twitter:description',
@@ -191,11 +149,49 @@ definePageMeta({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/contact-twitter-image.jpg'
-    },
+      content: 'https://DYLegendarytente.com/assets/images/contact_banner_last.jpg'
+    }
+  ],
+  link: [
     {
-      name: 'canonical',
-      content: 'https://DYLegendarytente.com/contact'
+      rel: 'canonical',
+      href: 'https://DYLegendarytente.com/contact'
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "DYLegendary Tente İletişim",
+        "description": "İzmir'de tente, pergola ve cam sistemleri için iletişim. Teklif alın, sorularınızı sorun.",
+        "url": "https://DYLegendarytente.com/contact",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "DYLegendary Tente",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "İzmir",
+            "addressRegion": "İzmir",
+            "addressCountry": "TR"
+          },
+          "telephone": "+90-541-928-54-87",
+          "email": "info@legendarytente.com",
+          "openingHours": "Mo-Sa 08:30-18:30",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.4192,
+            "longitude": 27.1287
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+90-541-928-54-87",
+            "contactType": "customer service",
+            "availableLanguage": "Turkish"
+          }
+        }
+      })
     }
   ]
 })
@@ -227,4 +223,4 @@ const handleSubmit = (event: Event) => {
 }
 .animate-slide-in-left { animation: slide-in-left 1s cubic-bezier(.68,-0.55,.27,1.55); }
 .animate-slide-in-right { animation: slide-in-right 1s cubic-bezier(.68,-0.55,.27,1.55); }
-</style> 
+</style>

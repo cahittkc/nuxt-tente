@@ -104,11 +104,11 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://DYLegendarytente.com/products'
+      content: 'https://dylegendary.com/products'
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/assets/images/products_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/products_banner_last.jpg'
     },
     {
       name: 'twitter:card',
@@ -124,13 +124,13 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/assets/images/products_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/products_banner_last.jpg'
     }
   ],
   link: [
     {
       rel: 'canonical',
-      href: 'https://DYLegendarytente.com/products'
+      href: 'https://dylegendary.com/products'
     }
   ],
   script: [
@@ -141,7 +141,7 @@ useHead({
         "@type": "ItemList",
         "name": "DYLegendary Tente Ürünleri",
         "description": "İzmir'de tente, pergola, cam sistemleri ve dış mekan çözümleri. Kaliteli ve dayanıklı ürünler.",
-        "url": "https://DYLegendarytente.com/products",
+        "url": "https://dylegendary.com/products",
         "numberOfItems": 6,
         "itemListElement": [
           {
@@ -149,21 +149,21 @@ useHead({
             "position": 1,
             "name": "Pergola Sistemleri",
             "description": "Modern pergola sistemleri ile dış mekanlarınızı güzelleştirin",
-            "url": "https://DYLegendarytente.com/products/pergola"
+            "url": "https://dylegendary.com/products/pergola"
           },
           {
             "@type": "Product",
             "position": 2,
             "name": "Tente Sistemleri",
             "description": "Dayanıklı tente sistemleri ile güneş ve yağmurdan korunun",
-            "url": "https://DYLegendarytente.com/products/tente"
+            "url": "https://dylegendary.com/products/tente"
           },
           {
             "@type": "Product",
             "position": 3,
             "name": "Cam Sistemleri",
             "description": "Şık cam sistemleri ile mekanlarınızı genişletin",
-            "url": "https://DYLegendarytente.com/products/cam-sistemleri"
+            "url": "https://dylegendary.com/products/cam-sistemleri"
           }
         ]
       })

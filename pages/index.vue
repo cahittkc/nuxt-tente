@@ -289,11 +289,11 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://DYLegendarytente.com'
+      content: 'https://dylegendary.com'
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/assets/images/home_page_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/home_page_banner_last.jpg'
     },
     {
       name: 'twitter:card',
@@ -309,13 +309,13 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/assets/images/home_page_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/home_page_banner_last.jpg'
     }
   ],
   link: [
     {
       rel: 'canonical',
-      href: 'https://DYLegendarytente.com'
+      href: 'https://dylegendary.com'
     }
   ],
   script: [
@@ -326,7 +326,7 @@ useHead({
         "@type": "LocalBusiness",
         "name": "DYLegendary Tente",
         "description": "İzmir'de 30 yıllık deneyimle tente, pergola, branda, lojistik, dorse ve cam sistemleri hizmeti veren firma",
-        "url": "https://DYLegendarytente.com",
+        "url": "https://dylegendary.com",
         "telephone": "+90-541-928-54-87",
         "address": {
           "@type": "PostalAddress",
@@ -462,11 +462,11 @@ definePageMeta({
     },
     {
       property: 'og:url',
-      content: 'https://DYLegendarytente.com'
+      content: 'https://dylegendary.com'
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/og-image.jpg'
+      content: 'https://dylegendary.com/og-image.jpg'
     },
     {
       name: 'twitter:card',
@@ -482,11 +482,11 @@ definePageMeta({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/twitter-image.jpg'
+      content: 'https://dylegendary.com/twitter-image.jpg'
     },
     {
       name: 'canonical',
-      content: 'https://DYLegendarytente.com'
+      content: 'https://dylegendary.com'
     },
     {
       name: 'geo.region',

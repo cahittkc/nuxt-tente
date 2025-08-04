@@ -28,8 +28,8 @@
           <p><span class="font-semibold">Adres:</span> İzmir, Türkiye</p>
           <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87 - +90 542 249 75 63</a></p>
           <p><span class="font-semibold">E-posta:</span> 
-            <a href="mailto:info@DYLegendarytente.com" class="hover:text-main-default transition-colors"> info@legendarytente.com</a> - 
-            <a href="mailto:info@DYLegendarytente.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
+            <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors"> info@legendarytente.com</a> - 
+            <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
           </p>
         </address>
         <div>
@@ -176,11 +176,11 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://DYLegendarytente.com/contact'
+      content: 'https://dylegendary.com/contact'
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/assets/images/contact_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/contact_banner_last.jpg'
     },
     {
       name: 'twitter:card',
@@ -196,13 +196,13 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/assets/images/contact_banner_last.jpg'
+      content: 'https://dylegendary.com/assets/images/contact_banner_last.jpg'
     }
   ],
   link: [
     {
       rel: 'canonical',
-      href: 'https://DYLegendarytente.com/contact'
+      href: 'https://dylegendary.com/contact'
     }
   ],
   script: [
@@ -213,7 +213,7 @@ useHead({
         "@type": "ContactPage",
         "name": "DYLegendary Tente İletişim",
         "description": "İzmir'de tente, pergola ve cam sistemleri için iletişim. Teklif alın, sorularınızı sorun.",
-        "url": "https://DYLegendarytente.com/contact",
+        "url": "https://dylegendary.com/contact",
         "mainEntity": {
           "@type": "Organization",
           "name": "DYLegendary Tente",

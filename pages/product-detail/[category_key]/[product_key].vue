@@ -165,11 +165,11 @@
       },
       {
         property: 'og:url',
-        content: 'https://DYLegendarytente.com/product-detail'
+        content: 'https://dylegendary.com/product-detail'
       },
       {
         property: 'og:image',
-        content: 'https://DYLegendarytente.com/default-product-image.jpg'
+        content: 'https://dylegendary.com/default-product-image.jpg'
       },
       {
         name: 'twitter:card',
@@ -185,11 +185,11 @@
       },
       {
         name: 'twitter:image',
-        content: 'https://DYLegendarytente.com/default-product-image.jpg'
+        content: 'https://dylegendary.com/default-product-image.jpg'
       },
       {
         name: 'canonical',
-        content: 'https://DYLegendarytente.com/product-detail'
+        content: 'https://dylegendary.com/product-detail'
       }
     ]
   })

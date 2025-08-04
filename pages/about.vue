@@ -182,11 +182,11 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://DYLegendarytente.com/about'
+      content: 'https://dylegendary.com/about'
     },
     {
       property: 'og:image',
-      content: 'https://DYLegendarytente.com/assets/images/pergola33.jpg'
+      content: 'https://dylegendary.com/assets/images/pergola33.jpg'
     },
     {
       name: 'twitter:card',
@@ -202,13 +202,13 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://DYLegendarytente.com/assets/images/pergola33.jpg'
+      content: 'https://dylegendary.com/assets/images/pergola33.jpg'
     }
   ],
   link: [
     {
       rel: 'canonical',
-      href: 'https://DYLegendarytente.com/about'
+      href: 'https://dylegendary.com/about'
     }
   ],
   script: [
@@ -219,8 +219,8 @@ useHead({
         "@type": "Organization",
         "name": "DYLegendary Tente",
         "description": "1994 yılından bu yana İzmir'de faaliyet gösteren, dış mekan gölgelendirme sistemlerinde uzmanlaşmış firma. Pergola, tente, cam sistemleri ve daha fazlası.",
-        "url": "https://DYLegendarytente.com",
-        "logo": "https://DYLegendarytente.com/assets/images/logo3.png",
+        "url": "https://dylegendary.com",
+        "logo": "https://dylegendary.com/assets/images/logo3.png",
         "foundingDate": "1994",
         "address": {
           "@type": "PostalAddress",
@@ -234,7 +234,7 @@ useHead({
           "availableLanguage": "Turkish"
         },
         "sameAs": [
-          "https://DYLegendarytente.com"
+          "https://dylegendary.com"
         ],
         "areaServed": {
           "@type": "Country",

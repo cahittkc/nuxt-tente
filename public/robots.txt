@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://legendarytente.com/sitemap.xml
+Sitemap: https://DYlegendarytente.com/sitemap.xml
 
 # Disallow admin and API routes
 Disallow: /admin/
@@ -12,6 +12,7 @@ Disallow: /api/
 Allow: /
 Allow: /products
 Allow: /contact
+Allow : /about
 Allow: /product-detail/
 
 # Crawl delay (optional)

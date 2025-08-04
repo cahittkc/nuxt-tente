@@ -3,10 +3,16 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('store', {
     state : () => ({
         categories : [
+            
             {
                 id : 1,
                 name : 'Tümü',
                 key : 'all'
+            },
+            {
+                id : 0,
+                name : 'Karoser Uygulamaları & Dorse Kayar Perde Sistemleri',
+                key : 'karoser_uygulamalari'
             },
             {
                 id : 2,
@@ -38,11 +44,7 @@ export const useStore = defineStore('store', {
                 name : 'Çadır',
                 key : 'cadir'
             },
-            {
-                id : 8,
-                name : 'Karoser Uygulamaları',
-                key : 'karoser_uygulamalari'
-            }
+            
         ],
         products : [
             {
@@ -50,6 +52,7 @@ export const useStore = defineStore('store', {
                 title: 'Standart Blockout Pergola',
                 category: 'pergola',
                 key : 'standart_blockout_pergola',
+                description : 'Standart Blockout pergola sistemleri, güçlü alüminyum konstrüksiyonu ve %100 su geçirmez blackout kumaşı ile dış mekanlarda dört mevsim konfor sağlar. Gölgelendirme, yağmur ve güneş korumasını bir arada sunan bu sistem, modern tasarımıyla bahçe, teras, kafe ve restoran alanlarına estetik bir görünüm kazandırır. Motorlu kontrol seçeneğiyle kolay kullanım imkanı sunar.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola1.png',
@@ -59,8 +62,6 @@ export const useStore = defineStore('store', {
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola5.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola6.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola7.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola8.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola9.png',
                 ],
                 properties : [
                   'Alüminyum lamellerin tamamen kapanmasıyla %100 ışık ve su yalıtımı sağlar.',
@@ -82,6 +83,7 @@ export const useStore = defineStore('store', {
                 title: 'Rolling Roof Pergola',
                 category: 'pergola',
                 key : 'rolling_roof_pergola',
+                description : 'Rolling Roof pergola sistemleri, alüminyum panellerin hareketli yapısıyla dış mekanlarda tam açılır-kapanır tavan konforu sunar. Güneş, yağmur ve kar gibi hava koşullarına karşı maksimum dayanıklılık sağlar. Modern tasarımı, uzaktan kumanda ile kontrol edilebilen sistemi ve entegre aydınlatma seçenekleriyle teras, bahçe, kafe ve restoran alanları için ideal çözümdür.',
                 properties : [
                   'Alüminyum paneller raylar üzerinde geriye doğru toplanır; açık tavan hissi verir.',
                   'İstenildiğinde tavan tamamen açılır, iç mekana maksimum hava ve ışık girişi sağlar.',
@@ -105,6 +107,7 @@ export const useStore = defineStore('store', {
                 title: 'Bioklimatik Pergola',
                 category: 'pergola',
                 key : 'bio_klimatik_pergola',
+                description : 'Bioklimatik pergola sistemleri, alüminyum döner panelleri sayesinde güneş ışığını, hava akışını ve yağmur suyunu kontrollü şekilde yöneterek dört mevsim konforlu bir yaşam alanı sunar. Motorlu mekanizması, entegre LED aydınlatma seçenekleri ve modern tasarımıyla teras, bahçe, otel, restoran ve kafe alanlarında estetik ve fonksiyonelliği bir araya getirir.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/bioklimatik_pergola1.png',
@@ -126,6 +129,7 @@ export const useStore = defineStore('store', {
                 title: 'Çatı Zip Perde',
                 category: 'teknik_tekstil_perdeler',
                 key : 'cati_zip_perde',
+                description : 'Çatı zip perde sistemleri, yatay ve eğimli alanlarda güneş ışığını ve ısıyı kontrol altına alarak ideal gölgelendirme sağlar. Rüzgar, yağmur ve UV ışınlarına karşı dayanıklı özel kumaşı ve fermuarlı ray sistemiyle uzun ömürlü ve güvenli kullanım sunar. Otomatik kontrol özelliği sayesinde pergola, veranda ve cam tavan uygulamaları için mükemmel bir çözümdür.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/cati_zip_perde.png',
@@ -147,6 +151,7 @@ export const useStore = defineStore('store', {
                 title: 'Dikey Zip Perde',
                 category: 'teknik_tekstil_perdeler',
                 key : 'dikey_zip_perde',
+                description : 'Dikey zip perde sistemleri, dikey düzlemde çalışan özel fermuarlı yapısıyla rüzgar, güneş ve yağmur gibi dış etkenlere karşı etkili koruma sağlar. Dayanıklı kumaşı ve raylı sistemi sayesinde dış mekanlarda maksimum konfor sunar. Otomasyon desteğiyle balkon, pergola, veranda ve kafe gibi alanlarda estetik ve işlevsel bir gölgelendirme çözümüdür.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/dikey_zip1.png',
@@ -167,24 +172,29 @@ export const useStore = defineStore('store', {
               },
               {
                 id: 6,
-                title: 'Yatay Zip Perde',
+                title: 'Şemsiye Ve Şezlong',
                 category: 'teknik_tekstil_perdeler',
-                key : 'yatay_zip_perde',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde1.png',
+                key : 'semsiye_ve_sezlong',
+                description : 'Dayanıklı ve estetik şemsiye ile konforlu şezlong modellerimiz, bahçe, plaj, havuz ve teras alanlarınızda rahatlığı ve şıklığı bir araya getirir. UV korumalı kumaşlar ve sağlam yapısıyla uzun ömürlü kullanım sağlar. Farklı boyut ve tasarımlarıyla her alana uyum sunar.',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/7.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/yatay_zip_perde4.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/1.jpeg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/2.jpeg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/3.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/5.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/6.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/7.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/8.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/9.jpeg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/10.png',
                 ],
                 properties : [
-                  'Kumaş, özel zip raylar içinde yatay (sağa veya sola) şekilde hareket eder.',
-                  'Uzaktan kumanda ile motorlu kullanım veya manuel opsiyonları mevcuttur.',
-                  'Fermuarlı ray sistemi sayesinde rüzgarda dahi gergin ve sabit kalır.',
-                  'UV filtreli kumaşlar sayesinde güneş ışığını keser ve dış görünürlüğü azaltır.',
-                  'Teras, balkon, pergola yan yüzeyleri gibi alanlarda yatay geçişli koruma sağlar.',
-                  'Karartmalı, geçirgen veya şeffaf kumaşlarla ihtiyaca göre özelleştirilebilir.',
-                  'Gizli ray ve kompakt kasa yapısıyla mimariye uyumlu şık bir tasarıma sahiptir.',
+                  'UV Koruma güneşin zararlı ışınlarına karşı yüksek koruma sağlar.',
+                  'Alüminyum veya ahşap iskelet, paslanmaya ve hava koşullarına dirençlidir.',
+                  'Gölgeyi istediğiniz yöne yönlendirme kolaylığı.',
+                  'Konforlu oturma ve uzanma pozisyonları için ayarlanabilir sırt desteği.',
+                  'Kolay taşınabilir yapısıyla kullanım pratikliği sağlar.',
+                  'Estetik zevkinize ve alanınıza uygun çeşitli tasarımlar.',
                 ]
               },
               {
@@ -192,6 +202,7 @@ export const useStore = defineStore('store', {
                 title: 'Kasetli Tente',
                 category: 'tente',
                 key : 'kasetli_tente',
+                description : 'Kasetli tente sistemleri, kapalı kaset yapısıyla tente kumaşını dış etkenlerden koruyarak uzun ömürlü kullanım sağlar. Estetik tasarımı, motorlu veya manuel seçenekleri ve güneşe karşı yüksek koruma sağlaması sayesinde balkon, teras, kafe ve mağaza önleri için ideal bir gölgelendirme çözümüdür. Açıldığında tam gölge, kapandığında ise şık bir görünüm sunar.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/kasetli_tente1.png',
@@ -210,30 +221,11 @@ export const useStore = defineStore('store', {
                 ]
               },
               {
-                id: 8,
-                title: 'Cam Balkon Sistemi',
-                category: 'cam_sistemleri',
-                key : 'cam_balkon_sistemi',
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png',
-                images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon2.png',
-                ],
-                properties : [
-                  'Cam paneller yana kayarak ya da katlanarak açılabilir; tamamen açıldığında açık balkon hissi verir.',
-                  'Balkonunuzu dört mevsim kullanmanıza olanak tanır; rüzgar, toz ve yağmurdan korur.',
-                  'Genellikle 8-10 mm kalınlığında kırıldığında dağılmayan, dayanıklı camlar tercih edilir.',
-                  'Çerçevesiz veya ince profilli yapısı sayesinde manzara engellenmeden görünür.',
-                  'Yapının mimarisine uyum sağlayan, şık ve sade bir görünüm sunar.',
-                  'Katlanabilir sistemlerde camların iç yüzeylerine erişim kolaydır; temizlik pratik yapılabilir.',
-                  'Isı kaybını azaltır, dışarıdan gelen sesleri önemli ölçüde izole eder.'
-                ]
-              },
-              {
                 id: 9,
                 title: 'Giyotin Sistemi',
                 category: 'cam_sistemleri',
                 key : 'giyotin_sistemi',
+                description : 'Giyotin sistemleri, yüksek performanslı cam veya alüminyum panellerin dikey olarak yukarı ve aşağı hareket etmesini sağlayan modern mimari çözümlerdir. Balkon, teras ve ofis cephelerinde şeffaflık, konfor ve estetik sunar. Isı ve ses yalıtımı sağlar, alanı dış hava koşullarından korur. Dayanıklı malzeme yapısı ve kolay kullanım özellikleriyle dört mevsim kullanım için idealdir.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
                 images : [
                     'https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png',
@@ -258,6 +250,7 @@ export const useStore = defineStore('store', {
                 title: 'Branda Uygulaması',
                 category: 'branda_uygulamalari',
                 key : 'branda_uygulamalari',
+                description : 'Branda uygulamaları, çeşitli ebat ve renk seçenekleriyle dış mekanlarda güneş, yağmur ve rüzgara karşı koruma sağlar. Dayanıklı ve su geçirmez materyaller kullanılarak yapılan branda çözümleri, pergola, tente, araç üstü ve endüstriyel alanlarda uzun ömürlü kullanım sunar. Kolay montaj ve bakım avantajlarıyla pratik bir koruma sistemidir.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png',
@@ -279,6 +272,7 @@ export const useStore = defineStore('store', {
                 title: 'Çadır',
                 category: 'cadir',
                 key : 'cadir',
+                description : 'Büyük çadır sistemleri, çeşitli kullanım alanlarına uygun dayanıklı ve geniş kapasiteli yapılar sunar. Endüstriyel, tarım, hayvancılık veya etkinlik amaçlı kullanılabilen bu çadırlar, sağlam malzeme ve esnek tasarımıyla uzun ömürlü ve pratik çözümler sağlar. Hava koşullarına dayanıklı yapısı sayesinde her mevsim güvenle kullanılabilir.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir1.png',
@@ -296,6 +290,7 @@ export const useStore = defineStore('store', {
                 title: 'Karoser Uygulamaları',
                 category: 'karoser_uygulamalari',
                 key : 'karoser_uygulamalari',
+                description : 'Karoser uygulamaları, araçların taşıma kapasitesini ve fonksiyonelliğini artırmak için özel tasarlanmış dayanıklı ve estetik çözümler sunar. Kamyon, dorse ve hafif ticari araçlar için hazırlanan karoser sistemleri; yük güvenliği, kullanım kolaylığı ve uzun ömürlü malzeme kalitesi ile ön plana çıkar. İhtiyaca göre özelleştirilebilen karoserler, iş verimliliğinizi artırır.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_uygulama1.png',
@@ -317,6 +312,7 @@ export const useStore = defineStore('store', {
                 title: 'Mafsallı Tente',
                 category: 'tente',
                 key : 'mafsalli_tente',
+                description : 'Mafsallı tente sistemleri, katlanabilir ve geniş açılır yapısıyla balkon, teras ve kafe gibi alanlarda kolay ve şık gölgelendirme sağlar. Dayanıklı kumaş seçenekleri ve sağlam mafsallı mekanizması sayesinde kullanımı pratiktir. Motorlu veya manuel kontrol seçenekleriyle kullanıcıya konforlu bir deneyim sunar.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/mafsalli_tente1.png',
@@ -340,6 +336,7 @@ export const useStore = defineStore('store', {
                 title: 'Wintent Tente',
                 category: 'tente',
                 key : 'wintent_tente',
+                description : 'Wintent tente sistemleri, modern tasarımı ve dayanıklı malzemeleriyle balkon, teras ve bahçeler için ideal gölgelendirme çözümleri sunar. Su ve UV korumalı kumaşları sayesinde uzun ömürlü kullanım sağlar, motorlu veya manuel seçeneklerle kolay kontrol imkanı verir.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente1.png',
@@ -363,6 +360,7 @@ export const useStore = defineStore('store', {
                 title: 'Perde Cam Sistemi',
                 category: 'cam_sistemleri',
                 key : 'perde_cam',
+                description : 'Perde cam sistemleri, estetik tasarımı ve tam açılır yapısıyla balkon, kafe, restoran ve teras alanlarında maksimum şeffaflık ve kullanım konforu sunar. Isı ve ses yalıtımı sağlayan yapısıyla dört mevsim konforlu bir yaşam alanı oluşturur. Dayanıklı alüminyum profiller ve temperli cam kullanımı sayesinde uzun ömürlü ve güvenli çözümler sağlar.',
                 img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png',
                 images : [
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png',
@@ -370,6 +368,9 @@ export const useStore = defineStore('store', {
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam3.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam4.png',
                   'https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam5.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon2.png',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/cam_balkon1.png'
                 ],
                 properties : [
                   'Paneller birbirine bağlıdır ve katlanarak yana doğru açılır, tamamen açılabilir.',
@@ -381,6 +382,35 @@ export const useStore = defineStore('store', {
                   'Temperli ve lamine camlar kullanılarak güvenlik artırılır.'
                 ]
               },
+              {
+                id: 16,
+                title: 'Dorse Kayar Perde Hizmetleri',
+                category: 'karoser_uygulamalari',
+                key : 'dorse_hizmetleri',
+                description : 'Kayar perde dorse sistemleri, hızlı yükleme-boşaltma imkanı, her iki yandan erişim, hava koşullarına karşı tam koruma ve uzun ömürlü malzeme yapısıyla lojistik sektöründe maksimum verimlilik sunar. CE belgeli sistemlerimiz, güvenli taşımacılık ve estetik görünümü bir arada sağlar.',
+                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda1.jpg',
+                properties :[
+                  'Kayar perde sistemi sayesinde yükleme ve boşaltma işlemleri çok daha hızlı ve kolay gerçekleşir. Zaman kazandırır.',
+                  'Perde sistemi her iki yandan açılabilir yapıdadır, bu da yüklemeyi her açıdan esnek hale getirir.',
+                  'Sağlam ray ve kilit sistemleri sayesinde yüklerin taşınma sırasında savrulması engellenir, maksimum güvenlik sağlar.',
+                  'UV ışınlarına, yağmura ve rüzgara karşı dayanıklı branda kumaşlarla üretilir. Yükünüzü korur.',
+                  'Marka baskısı yapılabilen yüzeyler ile araçlarınız kurumsal kimliğinizi yansıtır, reklam alanı olarak da kullanılır.',
+                  'Paslanmaz metal aksamlar ve yüksek mukavemetli brandalar ile uzun ömürlü kullanım sunar.',
+                  'CE standartlarına uygun olarak üretilir, yasal gereklilikleri karşılayan güvenli sistemlerdir.'
+                ],
+                images : [
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda1.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda2.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda3.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda4.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda5.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda6.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda7.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda8.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda9.jpg',
+                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda10.jpg',
+                ]  
+              }
         ]
     }),
 })

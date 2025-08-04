@@ -7,7 +7,7 @@
           {{ product?.title || 'Ürün Detayı' }}
         </h1>
         <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-          Su geçirmez özel kumaşı, modern tasarımı ve uzun ömürlü yapısıyla Standart Blockout Pergola, dış mekanlarınız için en iyi gölgelendirme çözümüdür. Şık görünümü ve fonksiyonel özellikleriyle her mevsim keyifli alanlar yaratın.
+          {{ product?.description || 'Bu ürün hakkında detaylı bilgi edinmek için lütfen iletişime geçin.' }}
         </p>
         <NuxtLink
           to="/contact"
@@ -133,19 +133,19 @@
   // SEO meta tags - basitleştirilmiş
   definePageMeta({
     layout: 'default',
-    title: 'Ürün Detayı - Legendary Tente | İzmir',
+    title: 'Ürün Detayı - DYLegendary Tente | İzmir',
     meta: [
       {
         name: 'description',
-        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
       },
       {
         name: 'keywords',
-        content: 'tente izmir, pergola izmir, cam sistemleri izmir, tente fiyatları, pergola fiyatları'
+        content: 'tente izmir, pergola izmir, cam sistemleri izmir, tente fiyatları, pergola fiyatları, lojistik, dorse'
       },
       {
         name: 'author',
-        content: 'Legendary Tente'
+        content: 'DYLegendary Tente'
       },
       {
         name: 'robots',
@@ -153,11 +153,11 @@
       },
       {
         property: 'og:title',
-        content: 'Ürün Detayı - Legendary Tente'
+        content: 'Ürün Detayı - DYLegendary Tente'
       },
       {
         property: 'og:description',
-        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
       },
       {
         property: 'og:type',
@@ -165,11 +165,11 @@
       },
       {
         property: 'og:url',
-        content: 'https://legendarytente.com/product-detail'
+        content: 'https://DYLegendarytente.com/product-detail'
       },
       {
         property: 'og:image',
-        content: 'https://legendarytente.com/default-product-image.jpg'
+        content: 'https://DYLegendarytente.com/default-product-image.jpg'
       },
       {
         name: 'twitter:card',
@@ -177,19 +177,19 @@
       },
       {
         name: 'twitter:title',
-        content: 'Ürün Detayı - Legendary Tente'
+        content: 'Ürün Detayı - DYLegendary Tente'
       },
       {
         name: 'twitter:description',
-        content: 'Legendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
+        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
       },
       {
         name: 'twitter:image',
-        content: 'https://legendarytente.com/default-product-image.jpg'
+        content: 'https://DYLegendarytente.com/default-product-image.jpg'
       },
       {
         name: 'canonical',
-        content: 'https://legendarytente.com/product-detail'
+        content: 'https://DYLegendarytente.com/product-detail'
       }
     ]
   })

@@ -1,6 +1,6 @@
 <template>
   <!-- Hero/Banner -->
-  <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola3.jpg)] bg-cover h-[500px] bg-center bg-no-repeat relative">
+  <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/contact_banner_last.jpg)] bg-cover h-[500px] bg-center bg-no-repeat relative">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 max-w-3xl mx-auto">
       <span class="uppercase tracking-widest text-main-300 font-semibold mb-3 animate-fade-in-down">İLETİŞİM</span>
@@ -26,8 +26,11 @@
         <h3 id="contact-info-heading" class="text-2xl font-bold text-gray-900 mb-2">İletişim Bilgilerimiz</h3>
         <address class="text-gray-700 space-y-2 not-italic">
           <p><span class="font-semibold">Adres:</span> İzmir, Türkiye</p>
-          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87</a></p>
-          <p><span class="font-semibold">E-posta:</span> <a href="mailto:info@legendarytente.com" class="hover:text-main-default transition-colors">info@legendarytente.com</a></p>
+          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87 - +90 542 249 75 63</a></p>
+          <p><span class="font-semibold">E-posta:</span> 
+            <a href="mailto:info@DYLegendarytente.com" class="hover:text-main-default transition-colors"> info@legendarytente.com</a> - 
+            <a href="mailto:info@DYLegendarytente.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
+          </p>
         </address>
         <div>
           <h4 class="font-bold text-gray-900 mb-2">Çalışma Saatleri</h4>
@@ -108,12 +111,12 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Legendary Tente İletişim",
+        "name": "DYLegendary Tente İletişim",
         "description": "İzmir'de tente, pergola ve cam sistemleri için iletişim. Teklif alın, sorularınızı sorun.",
-        "url": "https://legendarytente.com/contact",
+        "url": "https://DYLegendarytente.com/contact",
         "mainEntity": {
           "@type": "Organization",
-          "name": "Legendary Tente",
+          "name": "DYLegendary Tente",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "İzmir",
@@ -121,7 +124,7 @@ useHead({
             "addressCountry": "TR"
           },
           "telephone": "+905551234567",
-          "email": "info@legendarytente.com",
+          "email": "info@DYLegendarytente.com",
           "openingHours": "Mo-Sa 08:30-18:30",
           "geo": {
             "@type": "GeoCoordinates",
@@ -136,11 +139,11 @@ useHead({
 
 definePageMeta({
   layout: 'default',
-  title: 'İletişim - Legendary Tente | İzmir Tente Firması',
+  title: 'İletişim - DYLegendary Tente | İzmir Tente Firması',
   meta: [
     {
       name: 'description',
-      content: 'Legendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: 0 555 123 45 67, E-posta: info@legendarytente.com'
+      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: 0 555 123 45 67, E-posta: info@DYLegendarytente.com'
     },
     {
       name: 'keywords',
@@ -148,7 +151,7 @@ definePageMeta({
     },
     {
       name: 'author',
-      content: 'Legendary Tente'
+      content: 'DYLegendary Tente'
     },
     {
       name: 'robots',
@@ -156,11 +159,11 @@ definePageMeta({
     },
     {
       property: 'og:title',
-      content: 'İletişim - Legendary Tente | İzmir Tente Firması'
+      content: 'İletişim - DYLegendary Tente | İzmir Tente Firması'
     },
     {
       property: 'og:description',
-      content: 'Legendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın.'
+      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın.'
     },
     {
       property: 'og:type',
@@ -168,11 +171,11 @@ definePageMeta({
     },
     {
       property: 'og:url',
-      content: 'https://legendarytente.com/contact'
+      content: 'https://DYLegendarytente.com/contact'
     },
     {
       property: 'og:image',
-      content: 'https://legendarytente.com/contact-og-image.jpg'
+      content: 'https://DYLegendarytente.com/contact-og-image.jpg'
     },
     {
       name: 'twitter:card',
@@ -180,7 +183,7 @@ definePageMeta({
     },
     {
       name: 'twitter:title',
-      content: 'İletişim - Legendary Tente'
+      content: 'İletişim - DYLegendary Tente'
     },
     {
       name: 'twitter:description',
@@ -188,11 +191,11 @@ definePageMeta({
     },
     {
       name: 'twitter:image',
-      content: 'https://legendarytente.com/contact-twitter-image.jpg'
+      content: 'https://DYLegendarytente.com/contact-twitter-image.jpg'
     },
     {
       name: 'canonical',
-      content: 'https://legendarytente.com/contact'
+      content: 'https://DYLegendarytente.com/contact'
     }
   ]
 })

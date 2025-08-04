@@ -1,6 +1,6 @@
 <template>
   <!-- Hero/Banner -->
-  <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola2.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
+  <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/products_banner_last.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 max-w-4xl mx-auto">
       <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight">
@@ -8,7 +8,7 @@
         <span class="text-main-400">Her Mekâna Uygun Çözümler</span>
       </h1>
       <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-        Pergola, tente, cam sistemleri ve daha fazlası Legendary Tente olarak dış mekanlarınız için estetik ve fonksiyonel ürün gruplarımızı keşfedin. Her ihtiyaca uygun, kaliteli ve dayanıklı çözümlerimizle yaşam alanlarınızı güzelleştiriyoruz.
+        Pergola, tente, cam sistemleri ve daha fazlası DYLegendary Tente olarak dış mekanlarınız için estetik ve fonksiyonel ürün gruplarımızı keşfedin. Her ihtiyaca uygun, kaliteli ve dayanıklı çözümlerimizle yaşam alanlarınızı güzelleştiriyoruz.
       </p>
       <NuxtLink
         to="/contact"
@@ -86,9 +86,9 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Legendary Tente Ürünleri",
+        "name": "DYLegendary Tente Ürünleri",
         "description": "İzmir'de tente, pergola, cam sistemleri ve dış mekan çözümleri. Kaliteli ve dayanıklı ürünler.",
-        "url": "https://legendarytente.com/products",
+        "url": "https://DYLegendarytente.com/products",
         "numberOfItems": 6,
         "itemListElement": [
           {
@@ -96,21 +96,21 @@ useHead({
             "position": 1,
             "name": "Pergola Sistemleri",
             "description": "Modern pergola sistemleri ile dış mekanlarınızı güzelleştirin",
-            "url": "https://legendarytente.com/products/pergola"
+            "url": "https://DYLegendarytente.com/products/pergola"
           },
           {
             "@type": "Product",
             "position": 2,
             "name": "Tente Sistemleri",
             "description": "Dayanıklı tente sistemleri ile güneş ve yağmurdan korunun",
-            "url": "https://legendarytente.com/products/tente"
+            "url": "https://DYLegendarytente.com/products/tente"
           },
           {
             "@type": "Product",
             "position": 3,
             "name": "Cam Sistemleri",
             "description": "Şık cam sistemleri ile mekanlarınızı genişletin",
-            "url": "https://legendarytente.com/products/cam-sistemleri"
+            "url": "https://DYLegendarytente.com/products/cam-sistemleri"
           }
         ]
       })
@@ -120,11 +120,11 @@ useHead({
 
 definePageMeta({
   layout: 'default',
-  title: 'Ürünlerimiz - Legendary Tente | Pergola, Tente, Cam Sistemleri İzmir',
+  title: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir',
   meta: [
     {
       name: 'description',
-      content: 'Legendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler. Her mekâna uygun çözümler.'
+      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler. Her mekâna uygun çözümler.'
     },
     {
       name: 'keywords',
@@ -132,7 +132,7 @@ definePageMeta({
     },
     {
       name: 'author',
-      content: 'Legendary Tente'
+      content: 'DYLegendary Tente'
     },
     {
       name: 'robots',
@@ -140,11 +140,11 @@ definePageMeta({
     },
     {
       property: 'og:title',
-      content: 'Ürünlerimiz - Legendary Tente | Pergola, Tente, Cam Sistemleri İzmir'
+      content: 'Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir'
     },
     {
       property: 'og:description',
-      content: 'Legendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler.'
+      content: 'DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir\'de kaliteli ve dayanıklı ürünler.'
     },
     {
       property: 'og:type',
@@ -152,11 +152,11 @@ definePageMeta({
     },
     {
       property: 'og:url',
-      content: 'https://legendarytente.com/products'
+      content: 'https://DYLegendarytente.com/products'
     },
     {
       property: 'og:image',
-      content: 'https://legendarytente.com/products-og-image.jpg'
+      content: 'https://DYLegendarytente.com/products-og-image.jpg'
     },
     {
       name: 'twitter:card',
@@ -164,7 +164,7 @@ definePageMeta({
     },
     {
       name: 'twitter:title',
-      content: 'Ürünlerimiz - Legendary Tente'
+      content: 'Ürünlerimiz - DYLegendary Tente'
     },
     {
       name: 'twitter:description',
@@ -172,11 +172,11 @@ definePageMeta({
     },
     {
       name: 'twitter:image',
-      content: 'https://legendarytente.com/products-twitter-image.jpg'
+      content: 'https://DYLegendarytente.com/products-twitter-image.jpg'
     },
     {
       name: 'canonical',
-      content: 'https://legendarytente.com/products'
+      content: 'https://DYLegendarytente.com/products'
     }
   ]
 })

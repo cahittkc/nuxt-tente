@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="flex flex-col ml-3">
-          <span class="text-2xl font-black tracking-tight  transition-colors duration-200" :class="isScrolled ? 'text-main-default' : 'text-white'">Legendary</span>
+          <span class="text-2xl font-black tracking-tight  transition-colors duration-200" :class="isScrolled ? 'text-main-default' : 'text-white'"><span :class="isScrolled ? 'text-[#3161A0]' : 'text-white'">DY</span>Legendary</span>
           <span class="text-xs font-medium tracking-widest transition-colors duration-200" :class="isScrolled ? 'text-gray-500' : 'text-gray-200'">ESTETİK ÇÖZÜMLER</span>
         </div>
       </NuxtLink>
@@ -41,6 +41,17 @@
           aria-label="Ürünlerimiz sayfası"
         >
           <span class="relative z-10">ÜRÜNLERİMİZ</span>
+          <div class="absolute inset-0 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+        </NuxtLink>
+        <NuxtLink
+          to="/about"
+          class="relative px-4 py-2 font-semibold rounded-lg transition-all duration-200 hover:text-main-default hover:bg-red-50 group"
+          :class="isScrolled ? 'text-gray-700' : 'text-white'"
+          active-class="!text-main-default bg-red-50"
+          role="menuitem"
+          aria-label="Hakkımızda sayfası"
+        >
+          <span class="relative z-10">HAKKIMIZDA</span>
           <div class="absolute inset-0 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
         </NuxtLink>
         <div class="w-px h-6 mx-2 transition-colors duration-200" :class="isScrolled ? 'bg-gray-300' : 'bg-gray-400'" aria-hidden="true"></div>
@@ -100,6 +111,16 @@
           aria-label="Ürünlerimiz sayfası"
         >
           ÜRÜNLERİMİZ
+        </NuxtLink>
+        <NuxtLink
+          to="/about"
+          class="block px-4 py-3 font-semibold rounded-lg text-black transition-all duration-200"
+          active-class="!text-main-default"
+          @click="closeMobileMenu"
+          role="menuitem"
+          aria-label="Hakkımızda sayfası"
+        >
+          HAKKIMIZDA
         </NuxtLink>
         <NuxtLink
           to="/contact"

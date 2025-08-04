@@ -1,7 +1,7 @@
 <template>
   <section class="min-h-screen flex flex-col">
     <!-- Hero Section -->
-    <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/pergola.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
+    <header class="flex flex-col items-center justify-center text-center px-4 py-20 animate-fade-in bg-[url(@/assets/images/home_page_banner_last.jpg)] bg-cover h-[800px] bg-center bg-no-repeat relative">
       <!-- Overlay for better text readability -->
       <div class="absolute inset-0 bg-black/40"></div>
       <!-- Content -->
@@ -12,7 +12,7 @@
           <span class="text-main-300">Garantili Çözümler</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto">
-          Legendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
+          DYLegendary Tente ile mekanlarınızı güneşten ve yağmurdan koruyun, dış mekanlarınızı daha kullanışlı ve şık hale getirin.
         </p>
         <NuxtLink
           to="/contact"
@@ -67,7 +67,7 @@
                 30 Yıllık <span class="text-main-default animate-pulse">Deneyim</span> ile Güvenilir Çözümler
               </h2>
               <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up">
-                1994 yılından bu yana İzmir'de faaliyet gösteren Legendary Tente, dış mekan gölgelendirme sistemlerinde Türkiye'nin önde gelen firmalarından biridir. Modern teknoloji ve geleneksel ustalığı birleştirerek, müşterilerimize en kaliteli tente çözümlerini sunuyoruz.
+                1994 yılından bu yana İzmir'de faaliyet gösteren DYLegendary Tente, dış mekan gölgelendirme sistemlerinde Türkiye'nin önde gelen firmalarından biridir. Modern teknoloji ve geleneksel ustalığı birleştirerek, müşterilerimize en kaliteli tente çözümlerini sunuyoruz.
               </p>
               <div class="grid grid-cols-2 gap-6 pt-6" role="group" aria-label="Şirket istatistikleri">
                 <div class="text-center animate-bounce-in">
@@ -104,7 +104,7 @@
                     </svg>
                   </div>
                   <h3 class="font-bold text-gray-900 mb-2">Kalite Garantisi</h3>
-                  <p class="text-sm text-gray-600">Tüm ürünlerimiz 5 yıl garanti kapsamındadır.</p>
+                  <p class="text-sm text-gray-600">En yüksek kalite standartlarında üretim ve hizmet.</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 animate-slide-in-left group">
                   <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -167,7 +167,7 @@
         <Carousel v-bind="carouselReferenceConfig" aria-label="Müşteri yorumları">
           <Slide>
             <blockquote class="bg-white rounded-lg shadow p-4 w-72 min-w-[18rem] min-h-[9rem] hover: transition-shadow duration-300 flex flex-col">
-              <p class="text-gray-600 italic mb-2">"Legendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
+              <p class="text-gray-600 italic mb-2">"DYLegendary Tente ile bahçemiz artık hem daha şık hem de yaz-kış kullanışlı!"</p>
               <cite class="block text-right text-red-600 font-semibold mt-auto">- Selin A.</cite>
             </blockquote>
           </Slide>
@@ -209,6 +209,53 @@
           </Slide>
         </Carousel>
       </section>
+
+      <!-- Çalıştığımız Firmalar -->  
+      <section class="py-16 bg-gray-50" aria-labelledby="partners-heading">
+        <div class="text-center mb-12 animate-fade-in-down">
+          <span class="uppercase text-red-600 font-semibold tracking-widest">REFERANSLARIMIZ</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-4 tracking-wider">ÇALIŞTIĞIMIZ FİRMALAR</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">30 yıllık deneyimimizle birçok kurumsal firmaya hizmet verdik ve güvenlerini kazandık.</p>
+        </div>
+        
+        <div class="overflow-hidden">
+          <Carousel v-bind="sirketCarousel" aria-label="Çalıştığımız firmalar">
+            <Slide v-for="(firma, index) in calistigimisFirmalar" :key="index">
+              <div class="bg-white rounded-xl shadow-lg p-8 mx-2 hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[280px] h-32 flex items-center justify-center group">
+                <div class="text-center">
+                  <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center group-hover:from-main-100 group-hover:to-main-200 transition-all duration-300">
+                    <span class="text-2xl font-bold text-gray-700 group-hover:text-main-600 transition-colors duration-300">{{ firma.logo }}</span>
+                  </div>
+                  <h3 class="font-bold text-gray-900 text-sm group-hover:text-main-600 transition-colors duration-300">{{ firma.name }}</h3>
+                  <p class="text-xs text-gray-500 mt-1">{{ firma.sector }}</p>
+                </div>
+              </div>
+            </Slide>
+          </Carousel>
+        </div>
+        
+        <!-- İstatistikler -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+          <div class="text-center animate-fade-in-up">
+            <div class="text-3xl md:text-4xl font-bold text-main-600 mb-2">500+</div>
+            <p class="text-gray-600 font-medium">Tamamlanan Proje</p>
+          </div>
+          <div class="text-center animate-fade-in-up" style="animation-delay: 0.1s">
+            <div class="text-3xl md:text-4xl font-bold text-main-600 mb-2">30</div>
+            <p class="text-gray-600 font-medium">Yıllık Deneyim</p>
+          </div>
+          <div class="text-center animate-fade-in-up" style="animation-delay: 0.2s">
+            <div class="text-3xl md:text-4xl font-bold text-main-600 mb-2">98%</div>
+            <p class="text-gray-600 font-medium">Müşteri Memnuniyeti</p>
+          </div>
+          <div class="text-center animate-fade-in-up" style="animation-delay: 0.3s">
+            <div class="text-3xl md:text-4xl font-bold text-main-600 mb-2">24/7</div>
+            <p class="text-gray-600 font-medium">Destek Hizmeti</p>
+          </div>
+        </div>
+      </section>
+
+
     </section>
   </section>
 </template>
@@ -224,9 +271,9 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Legendary Tente",
-        "description": "İzmir'de 30 yıllık deneyimle tente, pergola, branda ve cam sistemleri hizmeti veren firma",
-        "url": "https://legendarytente.com",
+        "name": "DYLegendary Tente",
+        "description": "İzmir'de 30 yıllık deneyimle tente, pergola, branda, lojistik, dorse ve cam sistemleri hizmeti veren firma",
+        "url": "https://DYLegendarytente.com",
         "telephone": "+90-232-XXX-XXXX",
         "address": {
           "@type": "PostalAddress",
@@ -269,6 +316,34 @@ useHead({
                 "@type": "Service",
                 "name": "Cam Sistemleri"
               }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lojistik Hizmetleri"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dorse Hizmetleri"  
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gölgelik Sistemleri"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Jüt Kumaş Uygulamaları"
+              }
             }
           ]
         },
@@ -276,7 +351,34 @@ useHead({
           "@type": "AggregateRating",
           "ratingValue": "4.8",
           "reviewCount": "150"
-        }
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "30 Yıllık Sektör Deneyimi"
+          }
+        ],
+        "knowsAbout": [
+          "Tente Sistemleri",
+          "Pergola Sistemleri", 
+          "Cam Sistemleri",
+          "Branda Uygulamaları",
+          "Teknik Tekstil Perdeler",
+          "Çadır Sistemleri",
+          "Dorse Sistemleri",
+          "Gölgelik Sistemleri",
+          "Jüt Kumaş Uygulamaları"
+        ],
+        "clientele": [
+          "Mega Üniversite",
+          "City Belediyesi",
+          "Tech Üniversitesi",
+          "Grand Hotel",
+          "Royal Hotel",
+          "Plaza AVM",
+          "Central Mall",
+          "Business Center"
+        ]
       })
     }
   ]
@@ -284,19 +386,19 @@ useHead({
 
 definePageMeta({
   layout: 'default',
-  title: 'Legendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri',
+  title: 'DYLegendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri',
   meta: [
     {
       name: 'description',
-      content: 'Legendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet. İzmir tente firması.'
+      content: 'DYLegendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet. İzmir tente firması.'
     },
     {
       name: 'keywords',
-      content: 'tente izmir, pergola izmir, branda izmir, cam balkon izmir, gölgelendirme sistemleri, tente firması izmir, pergola firması, branda firması, cam sistemleri, dış mekan çözümleri, tente montaj, pergola montaj'
+      content: 'tente izmir, pergola izmir, branda izmir, cam balkon izmir, gölgelendirme sistemleri, tente firması izmir, pergola firması, branda firması, cam sistemleri, dış mekan çözümleri, tente montaj, pergola montaj, dorse, tente, gölgelik, jüt, dorse sistemleri, jüt kumaş, gölgelik sistemleri'
     },
     {
       name: 'author',
-      content: 'Legendary Tente'
+      content: 'DYLegendary Tente'
     },
     {
       name: 'robots',
@@ -304,11 +406,11 @@ definePageMeta({
     },
     {
       property: 'og:title',
-      content: 'Legendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri'
+      content: 'DYLegendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri'
     },
     {
       property: 'og:description',
-      content: 'Legendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet.'
+      content: 'DYLegendary Tente ile İzmir\'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet.'
     },
     {
       property: 'og:type',
@@ -316,11 +418,11 @@ definePageMeta({
     },
     {
       property: 'og:url',
-      content: 'https://legendarytente.com'
+      content: 'https://DYLegendarytente.com'
     },
     {
       property: 'og:image',
-      content: 'https://legendarytente.com/og-image.jpg'
+      content: 'https://DYLegendarytente.com/og-image.jpg'
     },
     {
       name: 'twitter:card',
@@ -328,7 +430,7 @@ definePageMeta({
     },
     {
       name: 'twitter:title',
-      content: 'Legendary Tente - İzmir Tente Sistemleri'
+      content: 'DYLegendary Tente - İzmir Tente Sistemleri'
     },
     {
       name: 'twitter:description',
@@ -336,11 +438,11 @@ definePageMeta({
     },
     {
       name: 'twitter:image',
-      content: 'https://legendarytente.com/twitter-image.jpg'
+      content: 'https://DYLegendarytente.com/twitter-image.jpg'
     },
     {
       name: 'canonical',
-      content: 'https://legendarytente.com'
+      content: 'https://DYLegendarytente.com'
     },
     {
       name: 'geo.region',
@@ -403,6 +505,99 @@ const urunler = [
     img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png',
   },
 ]
+
+const calistigimisFirmalar = [
+  {
+    name: 'Mega Üniversite',
+    logo: 'MÜ',
+    sector: 'Eğitim'
+  },
+  {
+    name: 'City Belediyesi',
+    logo: 'CB',
+    sector: 'Kamu'
+  },
+  {
+    name: 'Metro Belediyesi',
+    logo: 'MB',
+    sector: 'Kamu'
+  },
+  {
+    name: 'Grand Hotel',
+    logo: 'GH',
+    sector: 'Turizm'
+  },
+  {
+    name: 'Plaza AVM',
+    logo: 'PA',
+    sector: 'Perakende'
+  },
+  {
+    name: 'Elite Restoran',
+    logo: 'ER',
+    sector: 'Gastronomi'
+  },
+  {
+    name: 'Business Center',
+    logo: 'BC',
+    sector: 'İş Merkezi'
+  },
+  {
+    name: 'Tech Üniversitesi',
+    logo: 'TÜ',
+    sector: 'Eğitim'
+  },
+  {
+    name: 'Royal Hotel',
+    logo: 'RH',
+    sector: 'Turizm'
+  },
+  {
+    name: 'Central Mall',
+    logo: 'CM',
+    sector: 'Perakende'
+  },
+  {
+    name: 'Premium Cafe',
+    logo: 'PC',
+    sector: 'Gastronomi'
+  },
+  {
+    name: 'Modern Okul',
+    logo: 'MO',
+    sector: 'Eğitim'
+  },
+  {
+    name: 'Luxury Resort',
+    logo: 'LR',
+    sector: 'Turizm'
+  },
+  {
+    name: 'Garden Restaurant',
+    logo: 'GR',
+    sector: 'Gastronomi'
+  },
+  {
+    name: 'Smart Office',
+    logo: 'SO',
+    sector: 'İş Merkezi'
+  },
+  {
+    name: 'Urban Mall',
+    logo: 'UM',
+    sector: 'Perakende'
+  },
+  {
+    name: 'Seaside Hotel',
+    logo: 'SH',
+    sector: 'Turizm'
+  },
+  {
+    name: 'Green Campus',
+    logo: 'GC',
+    sector: 'Eğitim'
+  }
+]
 </script>
 
 <style scoped>
@@ -441,4 +636,4 @@ const urunler = [
 .animate-testimonial-carousel {
   min-width: 200%;
 }
-</style> 
+</style>

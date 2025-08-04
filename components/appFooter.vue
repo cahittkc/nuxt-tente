@@ -7,7 +7,7 @@
           <div class="w-10 h-10 bg-gradient-to-br  rounded-xl flex items-center justify-center shadow-lg">
             <img src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
           </div>
-          <span class="text-2xl font-black tracking-tight text-white">LEGENDARY TENTE</span>
+          <span class="text-2xl font-black tracking-tight text-white">DYLEGENDARY TENTE</span>
         </div>
         <p class="text-gray-300 text-sm max-w-xs">Dış mekanlarınız için estetik ve dayanıklı tente çözümleri. İzmir ve çevresinde 30+ yıllık tecrübe.</p>
       </div>
@@ -16,12 +16,13 @@
         <span class="text-lg font-bold text-white mb-2">Menü</span>
         <NuxtLink to="/" class="text-gray-300 hover:text-main-default transition-colors" aria-label="Ana sayfa">Ana Sayfa</NuxtLink>
         <NuxtLink to="/products" class="text-gray-300 hover:text-main-default transition-colors" aria-label="Ürünlerimiz sayfası">Ürünlerimiz</NuxtLink>
+        <NuxtLink to="/about" class="text-gray-300 hover:text-main-default transition-colors" aria-label="İletişim sayfası">Hakkımızda</NuxtLink>
         <NuxtLink to="/contact" class="text-gray-300 hover:text-main-default transition-colors" aria-label="İletişim sayfası">İletişim</NuxtLink>
       </nav>
       <!-- Sağ: İletişim -->
       <address class="flex flex-col gap-2 not-italic">
         <span class="text-lg font-bold text-white mb-2">İletişim</span>
-        <a href="tel:+905551234567" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87</a>
+        <a href="tel:+905551234567" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87 - +90 542 249 75 63 </a>
         <a href="mailto:info@legendarytente.com" class="text-gray-300 text-sm hover:text-main-default transition-colors">E-posta: info@legendarytente.com</a>
         <span class="text-gray-300 text-sm">Adres: İzmir, Türkiye</span>
       </address>

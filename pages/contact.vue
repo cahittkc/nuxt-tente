@@ -28,7 +28,7 @@
           <p><span class="font-semibold">Adres:</span> İzmir, Türkiye</p>
           <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87 - +90 542 249 75 63</a></p>
           <p><span class="font-semibold">E-posta:</span> 
-            <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors"> info@legendarytente.com</a> - 
+            <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors"> info@dylegendary.com</a> - 
             <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
           </p>
         </address>
@@ -156,7 +156,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: +90 541 928 54 87, E-posta: info@legendarytente.com'
+      content: 'DYLegendary Tente ile iletişime geçin. İzmir\'de tente, pergola, cam sistemleri için teklif alın. Telefon: +90 541 928 54 87, E-posta: info@dylegendary.com'
     },
     {
       name: 'keywords',
@@ -224,7 +224,7 @@ useHead({
             "addressCountry": "TR"
           },
           "telephone": "+90-541-928-54-87",
-          "email": "info@legendarytente.com",
+          "email": "info@dylegendary.com",
           "openingHours": "Mo-Sa 08:30-18:30",
           "geo": {
             "@type": "GeoCoordinates",

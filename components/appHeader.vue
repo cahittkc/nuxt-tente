@@ -6,10 +6,7 @@
         
         <div class="relative max-md:ml-8">
           <div class="w-10 h-10   rounded-xl flex items-center justify-center  transition-all duration-200">
-            <transition name="fade-logo" mode="out-in">
-              <img v-if="showLogo === 'tente'" key="tente" src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
-              <img v-else key="dogruyol" src="../assets/images/dogruyol_son.png" alt="Legendary Dogruyol Logo" class="max-w-[150px] h-20  object-cover rounded-lg -ml-[35px]" loading="lazy">
-            </transition>
+              <img key="tente" src="../assets/images/logo3.png" alt="Legendary Tente Logo" class="max-w-[150px] h-20 object-cover" loading="lazy">
           </div>
         </div>
         <div class="flex flex-col ml-3">
@@ -140,7 +137,6 @@
 const isMobileMenuOpen = ref(false)
 const isScrolled = ref(false)
 
-const showLogo = ref<'tente' | 'dogruyol'>('tente')
 
 // Scroll event listener
 onMounted(() => {
@@ -148,17 +144,13 @@ onMounted(() => {
     isScrolled.value = window.scrollY > 200
   }
 
-  // Logo döngüsü başlat
-  const logoInterval = setInterval(() => {
-    showLogo.value = showLogo.value === 'tente' ? 'dogruyol' : 'tente'
-  }, 10000)
+ 
 
   window.addEventListener('scroll', handleScroll)
 
   // Cleanup
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
-    clearInterval(logoInterval)
   })
 })
 

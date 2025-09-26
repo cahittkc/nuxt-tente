@@ -26,7 +26,7 @@
         <h3 id="contact-info-heading" class="text-2xl font-bold text-gray-900 mb-2">İletişim Bilgilerimiz</h3>
         <address class="text-gray-700 space-y-2 not-italic">
           <p><span class="font-semibold">Adres:</span> İzmir, Türkiye</p>
-          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87 - +90 542 249 75 63</a></p>
+          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87</a></p>
           <p><span class="font-semibold">E-posta:</span> 
             <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors"> info@dylegendary.com</a> - 
             <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>

@@ -22,7 +22,7 @@
       <!-- Sağ: İletişim -->
       <address class="flex flex-col gap-2 not-italic">
         <span class="text-lg font-bold text-white mb-2">İletişim</span>
-        <a href="tel:+905551234567" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87 - +90 542 249 75 63 </a>
+        <a href="tel:+905551234567" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87</a>
         <a href="mailto:info@d.com" class="text-gray-300 text-sm hover:text-main-default transition-colors">E-posta: info@legendary.com</a>
         <span class="text-gray-300 text-sm">Adres: İzmir, Türkiye</span>
       </address>

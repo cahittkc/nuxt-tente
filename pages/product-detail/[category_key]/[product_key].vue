@@ -24,7 +24,13 @@
   
     <!-- Ürün Detayı -->
     <main class="container mx-auto py-12 px-4" aria-labelledby="product-details-heading">
-      <h2 id="product-details-heading" class="sr-only">Ürün Detayları</h2>
+      <nav class="mb-8 text-sm text-gray-600" aria-label="Sayfa yolu">
+        <NuxtLink to="/" class="hover:text-main-default">Ana Sayfa</NuxtLink>
+        <span class="mx-2" aria-hidden="true">/</span>
+        <NuxtLink :to="categoryUrl" class="hover:text-main-default">{{ categoryName }}</NuxtLink>
+        <span class="mx-2" aria-hidden="true">/</span>
+        <span aria-current="page">{{ product?.title }}</span>
+      </nav>
       <div class="grid md:grid-cols-2 gap-10">
         <!-- Sol: Büyük görsel ve galeri -->
         <section aria-label="Ürün görselleri">
@@ -74,7 +80,9 @@
         </section>
         <!-- Sağ: Başlık, öne çıkanlar, garanti, buton -->
         <article class="animate-slide-in-right flex flex-col">
-          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">{{ product?.title || 'Ürün Detayı' }}</h3>
+          <h2 id="product-details-heading" class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+            {{ product?.title }} Özellikleri
+          </h2>
           <ul class="text-gray-700 space-y-2 mb-6 list-disc list-inside animate-fade-in-up" role="list">
             <li v-for="property in product?.properties || []" :key="property" role="listitem">{{ property }}</li>
           </ul>
@@ -87,14 +95,27 @@
           </NuxtLink>
         </article>
       </div>
-  
-      <!-- Özellikler ve Teknik Detaylar -->
-      
+
+      <section v-if="relatedProducts.length" class="mt-14" aria-labelledby="related-products-heading">
+        <h2 id="related-products-heading" class="text-2xl font-extrabold text-gray-900 mb-6">
+          Benzer {{ categoryName }} Ürünleri
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <NuxtLink
+            v-for="relatedProduct in relatedProducts"
+            :key="relatedProduct.id"
+            :to="`/product-detail/${relatedProduct.category}/${relatedProduct.key}`"
+            class="rounded-xl border border-gray-200 bg-white p-5 font-bold text-gray-900 shadow-sm transition hover:border-main-default hover:text-main-default"
+          >
+            {{ relatedProduct.title }}
+          </NuxtLink>
+        </div>
+      </section>
     </main>
   </template>
   
   <script setup lang="ts">
-  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+  import { Carousel, Slide, Navigation } from 'vue3-carousel'
   import 'vue3-carousel/dist/carousel.css'
 
   const currentSlide = ref(0)
@@ -117,82 +138,126 @@
     gap: 10,
   }
 
-  // Store'u güvenli şekilde kullan
   const store = useStore()
-  
-  // Route'u güvenli şekilde kullan
   const route = useRoute()
-  
-  const product = computed(() => {
-    if (!store.products || !route.params.product_key) return null
-    return store.products.find(p => p.key === route.params.product_key)
-  })
-  
-  const galleryImages = computed(() => product.value?.images)
 
-  // SEO meta tags - basitleştirilmiş
+  const getRouteParam = (value: string | string[] | undefined) =>
+    Array.isArray(value) ? value[0] ?? '' : value ?? ''
+
+  const categoryKey = computed(() => getRouteParam(route.params.category_key))
+  const productKey = computed(() => getRouteParam(route.params.product_key))
+
+  const product = computed(() => {
+    return store.products.find(item =>
+      item.key === productKey.value && item.category === categoryKey.value
+    ) ?? null
+  })
+
+  if (!product.value) {
+    throw createError({
+      statusCode: 404,
+      message: 'Ürün bulunamadı'
+    })
+  }
+
+  const category = computed(() =>
+    store.categories.find(item => item.key === categoryKey.value)
+  )
+  const categoryName = computed(() => category.value?.name ?? 'Ürünler')
+  const categoryUrl = computed(() =>
+    `/products?category=${encodeURIComponent(categoryKey.value)}`
+  )
+  const canonicalUrl = computed(() =>
+    `https://dylegendary.com/product-detail/${encodeURIComponent(categoryKey.value)}/${encodeURIComponent(productKey.value)}`
+  )
+  const seoTitle = computed(() =>
+    `${product.value?.title} | ${categoryName.value} - DYLegendary Tente`
+  )
+  const seoDescription = computed(() => {
+    const description = product.value?.description ?? ''
+    if (description.length <= 160) return description
+
+    return `${description.slice(0, 156).replace(/\s+\S*$/, '')}...`
+  })
+  const relatedProducts = computed(() =>
+    store.products
+      .filter(item => item.category === categoryKey.value && item.key !== productKey.value)
+      .slice(0, 3)
+  )
+
   definePageMeta({
-    layout: 'default',
-    title: 'Ürün Detayı - DYLegendary Tente | İzmir',
-    meta: [
+    layout: 'default'
+  })
+
+  useSeoMeta({
+    title: () => seoTitle.value,
+    description: () => seoDescription.value,
+    robots: 'index, follow',
+    ogTitle: () => seoTitle.value,
+    ogDescription: () => seoDescription.value,
+    ogType: 'website',
+    ogUrl: () => canonicalUrl.value,
+    ogImage: () => product.value?.img ?? '',
+    ogImageAlt: () => `${product.value?.title} ürün görseli`,
+    twitterCard: 'summary_large_image',
+    twitterTitle: () => seoTitle.value,
+    twitterDescription: () => seoDescription.value,
+    twitterImage: () => product.value?.img ?? '',
+    twitterImageAlt: () => `${product.value?.title} ürün görseli`
+  })
+
+  useHead(() => ({
+    link: [
+      { key: 'canonical', rel: 'canonical', href: canonicalUrl.value }
+    ],
+    script: [
       {
-        name: 'description',
-        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
-      },
-      {
-        name: 'keywords',
-        content: 'tente izmir, pergola izmir, cam sistemleri izmir, tente fiyatları, pergola fiyatları, lojistik, dorse'
-      },
-      {
-        name: 'author',
-        content: 'DYLegendary Tente'
-      },
-      {
-        name: 'robots',
-        content: 'index, follow'
-      },
-      {
-        property: 'og:title',
-        content: 'Ürün Detayı - DYLegendary Tente'
-      },
-      {
-        property: 'og:description',
-        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
-      },
-      {
-        property: 'og:type',
-        content: 'product'
-      },
-      {
-        property: 'og:url',
-        content: 'https://dylegendary.com/product-detail'
-      },
-      {
-        property: 'og:image',
-        content: 'https://dylegendary.com/default-product-image.jpg'
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        name: 'twitter:title',
-        content: 'Ürün Detayı - DYLegendary Tente'
-      },
-      {
-        name: 'twitter:description',
-        content: 'DYLegendary Tente ürün detayları. İzmir\'de kaliteli ve dayanıklı tente, pergola ve cam sistemleri.'
-      },
-      {
-        name: 'twitter:image',
-        content: 'https://dylegendary.com/default-product-image.jpg'
-      },
-      {
-        name: 'canonical',
-        content: 'https://dylegendary.com/product-detail'
+        key: 'product-structured-data',
+        type: 'application/ld+json',
+        textContent: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [
+            {
+              '@type': 'Product',
+              name: product.value?.title,
+              description: product.value?.description,
+              image: product.value?.images ?? [product.value?.img],
+              category: categoryName.value,
+              url: canonicalUrl.value,
+              additionalProperty: product.value?.properties.map(property => ({
+                '@type': 'PropertyValue',
+                name: 'Özellik',
+                value: property
+              }))
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Ana Sayfa',
+                  item: 'https://dylegendary.com/'
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: categoryName.value,
+                  item: `https://dylegendary.com${categoryUrl.value}`
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: product.value?.title,
+                  item: canonicalUrl.value
+                }
+              ]
+            }
+          ]
+        })
       }
     ]
-  })
+  }))
   </script>
   
   <style scoped>

@@ -155,7 +155,14 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import aboutBanner from '~/assets/images/about_banner_last.jpg'
+import logoImage from '~/assets/images/logo3.png'
+
+const siteUrl = 'https://dylegendary.com'
+const socialImage = new URL(aboutBanner, siteUrl).href
+const logoUrl = new URL(logoImage, siteUrl).href
+
 // SEO Meta Tags
 useHead({
   title: 'Hakkımızda -DYLegendary Tente | 30 Yıllık Deneyim',
@@ -186,7 +193,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://dylegendary.com/assets/images/pergola33.jpg'
+      content: socialImage
     },
     {
       name: 'twitter:card',
@@ -202,7 +209,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://dylegendary.com/assets/images/pergola33.jpg'
+      content: socialImage
     }
   ],
   link: [
@@ -220,7 +227,7 @@ useHead({
         "name": "DYLegendary Tente",
         "description": "1994 yılından bu yana İzmir'de faaliyet gösteren, dış mekan gölgelendirme sistemlerinde uzmanlaşmış firma. Pergola, tente, cam sistemleri ve daha fazlası.",
         "url": "https://dylegendary.com",
-        "logo": "https://dylegendary.com/assets/images/logo3.png",
+        "logo": logoUrl,
         "foundingDate": "1994",
         "address": {
           "@type": "PostalAddress",
@@ -233,9 +240,6 @@ useHead({
           "contactType": "customer service",
           "availableLanguage": "Turkish"
         },
-        "sameAs": [
-          "https://dylegendary.com"
-        ],
         "areaServed": {
           "@type": "Country",
           "name": "Turkey"
@@ -247,8 +251,6 @@ useHead({
           "Teknik Tekstil Perdeler",
           "Dış Mekan Gölgelendirme"
         ],
-        "yearEstablished": "1994",
-        "numberOfEmployees": "10-50",
         "knowsAbout": [
           "Pergola",
           "Tente",

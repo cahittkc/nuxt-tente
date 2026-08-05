@@ -26,10 +26,10 @@
         <h3 id="contact-info-heading" class="text-2xl font-bold text-gray-900 mb-2">İletişim Bilgilerimiz</h3>
         <address class="text-gray-700 space-y-2 not-italic">
           <p><span class="font-semibold">Adres:</span> İzmir, Türkiye</p>
-          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905551234567" class="hover:text-main-default transition-colors">+90 541 928 54 87</a></p>
+          <p><span class="font-semibold">Telefon:</span> <a href="tel:+905419285487" class="hover:text-main-default transition-colors">+90 541 928 54 87</a></p>
           <p><span class="font-semibold">E-posta:</span> 
             <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors"> info@dylegendary.com</a> - 
-            <a href="mailto:info@dylegendary.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
+            <a href="mailto:legendary.shading.system@gmail.com" class="hover:text-main-default transition-colors">legendary.shading.system@gmail.com</a>
           </p>
         </address>
         <div>
@@ -150,6 +150,10 @@
 </template>
 
 <script setup lang="ts">
+import contactBanner from '~/assets/images/contact_banner_last.jpg'
+
+const socialImage = new URL(contactBanner, 'https://dylegendary.com').href
+
 // SEO Meta Tags
 useHead({
   title: 'İletişim - DYLegendary Tente | İzmir Tente Firması',
@@ -180,7 +184,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://dylegendary.com/assets/images/contact_banner_last.jpg'
+      content: socialImage
     },
     {
       name: 'twitter:card',
@@ -196,7 +200,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: 'https://dylegendary.com/assets/images/contact_banner_last.jpg'
+      content: socialImage
     }
   ],
   link: [
@@ -219,6 +223,8 @@ useHead({
           "name": "DYLegendary Tente",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Kemalpaşa, 7081. Sk. No:19",
+            "postalCode": "35060",
             "addressLocality": "İzmir",
             "addressRegion": "İzmir",
             "addressCountry": "TR"
@@ -226,11 +232,6 @@ useHead({
           "telephone": "+90-541-928-54-87",
           "email": "info@dylegendary.com",
           "openingHours": "Mo-Sa 08:30-18:30",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 38.4192,
-            "longitude": 27.1287
-          },
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+90-541-928-54-87",

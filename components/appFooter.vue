@@ -22,9 +22,9 @@
       <!-- Sağ: İletişim -->
       <address class="flex flex-col gap-2 not-italic">
         <span class="text-lg font-bold text-white mb-2">İletişim</span>
-        <a href="tel:+905551234567" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87</a>
-        <a href="mailto:info@d.com" class="text-gray-300 text-sm hover:text-main-default transition-colors">E-posta: info@legendary.com</a>
-        <span class="text-gray-300 text-sm">Adres: İzmir, Türkiye</span>
+        <a href="tel:+905419285487" class="text-gray-300 text-sm hover:text-main-default transition-colors">Telefon: +90 541 928 54 87</a>
+        <a href="mailto:info@dylegendary.com" class="text-gray-300 text-sm hover:text-main-default transition-colors">E-posta: info@dylegendary.com</a>
+        <span class="text-gray-300 text-sm">Adres: Kemalpaşa, 7081. Sk. No:19, 35060 Bornova/İzmir</span>
       </address>
     </div>
     <div class="container mx-auto px-6 mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -42,4 +42,4 @@
       </nav>
     </div>
   </footer>
-</template> 
+</template>

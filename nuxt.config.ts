@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    url: 'https://dylegendary.com'
+  },
   devServer : {
     port : 8080
   },
@@ -40,9 +43,7 @@ export default defineNuxtConfig({
     }
   },
   
-  // Sitemap configuration
   sitemap: {
-    // Basic sitemap configuration
-    // The module will automatically generate sitemap for all pages
-  } 
+    sources: ['/api/_sitemap-urls']
+  }
 })

@@ -8,16 +8,12 @@
       <h1
         class="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-down leading-tight"
       >
-        Geniş Ürün Yelpazesi<br />
-        <span class="text-main-400">Tente & Pergola Modelleri</span>
+        {{ pageHeading }}
       </h1>
       <p
         class="text-lg md:text-xl text-gray-200 mb-8 animate-fade-in-up max-w-2xl mx-auto"
       >
-        Pergola, tente, cam sistemleri ve daha fazlası DYLegendary Tente olarak
-        dış mekanlarınız için estetik ve fonksiyonel ürün gruplarımızı keşfedin.
-        Her ihtiyaca uygun, kaliteli ve dayanıklı çözümlerimizle yaşam
-        alanlarınızı güzelleştiriyoruz.
+        {{ pageIntro }}
       </p>
       <NuxtLink
         to="/contact"
@@ -49,22 +45,27 @@
           <li
             v-for="cat in store.categories"
             :key="cat.key"
-            @click="selectedCategory = cat.key"
             :class="[
-              'flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition',
+              'rounded-lg transition',
               selectedCategory === cat.key
                 ? 'bg-white shadow text-main-400 font-bold'
                 : 'hover:bg-gray-100 text-gray-700',
             ]"
             role="listitem"
           >
-            <span>{{ cat.name }}</span>
-            <span
-              v-if="selectedCategory === cat.key"
-              class="text-main-default text-lg"
-              aria-hidden="true"
-              >→</span
+            <NuxtLink
+              :to="cat.key === 'all' ? '/products' : { path: '/products', query: { category: cat.key } }"
+              class="flex items-center justify-between px-3 py-2"
+              :aria-current="selectedCategory === cat.key ? 'page' : undefined"
             >
+              <span>{{ cat.name }}</span>
+              <span
+                v-if="selectedCategory === cat.key"
+                class="text-main-default text-lg"
+                aria-hidden="true"
+                >→</span
+              >
+            </NuxtLink>
           </li>
         </ul>
       </nav>
@@ -72,7 +73,9 @@
 
     <!-- Ürünler Grid -->
     <section class="flex-1" aria-labelledby="products-heading">
-      <h2 id="products-heading" class="sr-only">Ürünler</h2>
+      <h2 id="products-heading" class="text-2xl font-extrabold text-gray-900 mb-8">
+        {{ productsHeading }}
+      </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <article
           v-for="(product, i) in filteredProducts"
@@ -111,115 +114,135 @@
   </main>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
+<script setup lang="ts">
+import productsBanner from "~/assets/images/products_banner_last.jpg";
 
 const store = useStore();
 const route = useRoute();
+const siteUrl = "https://dylegendary.com";
+const socialImage = new URL(productsBanner, siteUrl).href;
 
-onMounted(() => {
-  if (route.query.category) {
-    selectedCategory.value = route.query.category;
-  }
+const selectedCategory = computed(() => {
+  const queryCategory = Array.isArray(route.query.category)
+    ? route.query.category[0]
+    : route.query.category;
+  const isValidCategory = store.categories.some(
+    category => category.key !== "all" && category.key === queryCategory
+  );
+
+  return isValidCategory && queryCategory ? queryCategory : "all";
 });
 
-// SEO Meta Tags
-useHead({
-  title:
-    "Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir",
-  meta: [
-    {
-      name: "description",
-      content:
-        "DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir'de kaliteli ve dayanıklı ürünler. Her mekâna uygun çözümler.",
-    },
-    {
-      name: "keywords",
-      content:
-        "tente ürünleri izmir, pergola ürünleri, cam sistemleri ürünleri, dış mekan çözümleri, tente fiyatları, pergola fiyatları, cam balkon ürünleri, Dorse, Tente, Gölgelik, Jüt",
-    },
-    {
-      property: "og:title",
-      content:
-        "Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir",
-    },
-    {
-      property: "og:description",
-      content:
-        "DYLegendary Tente ürünleri: Pergola, tente, cam sistemleri ve dış mekan çözümleri. İzmir'de kaliteli ve dayanıklı ürünler.",
-    },
-    {
-      property: "og:type",
-      content: "website",
-    },
-    {
-      property: "og:url",
-      content: "https://dylegendary.com/products",
-    },
-    {
-      property: "og:image",
-      content: "https://dylegendary.com/assets/images/products_banner_last.jpg",
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      name: "twitter:title",
-      content:
-        "Ürünlerimiz - DYLegendary Tente | Pergola, Tente, Cam Sistemleri İzmir",
-    },
-    {
-      name: "twitter:description",
-      content:
-        "İzmir'de pergola, tente, cam sistemleri ve dış mekan çözümleri. Kaliteli ürünler, uygun fiyatlar.",
-    },
-    {
-      name: "twitter:image",
-      content: "https://dylegendary.com/assets/images/products_banner_last.jpg",
-    },
-  ],
-  link: [
-    {
-      rel: "canonical",
-      href: "https://dylegendary.com/products",
-    },
-  ],
-  script: [
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        name: "DYLegendary Tente Ürünleri",
-        description:
-          "İzmir'de tente, pergola, cam sistemleri ve dış mekan çözümleri. Kaliteli ve dayanıklı ürünler.",
-        url: "https://dylegendary.com/products",
-        numberOfItems: store.products.length,
-        itemListElement: store.products.map((product, index) => ({
-          "@type": "Product",
-          position: index + 1,
-          name: product.title,
-          description: product.description,
-          url: `https://dylegendary.com/product-detail/${product.category}/${product.key}`,
-          image: product.img,
-        })),
-      }),
-    },
-  ],
-});
-
-const selectedCategory = ref("all");
-
-// Store'u güvenli şekilde kullan
-// const store = useStore()
+const selectedCategoryData = computed(() =>
+  store.categories.find(category => category.key === selectedCategory.value)
+);
+const categoryName = computed(() => selectedCategoryData.value?.name ?? "Ürünler");
+const pageHeading = computed(() =>
+  selectedCategory.value === "all"
+    ? "Tente, Pergola ve Dış Mekan Sistemleri"
+    : `${categoryName.value} Ürünleri`
+);
+const productsHeading = computed(() =>
+  selectedCategory.value === "all"
+    ? "Tüm Ürünlerimiz"
+    : `${categoryName.value} Modelleri`
+);
+const pageIntro = computed(() =>
+  selectedCategory.value === "all"
+    ? "Pergola, tente, cam sistemleri ve diğer dış mekan çözümlerimizi inceleyin. İhtiyacınıza uygun ürünün teknik özelliklerine ve görsellerine ulaşın."
+    : `${categoryName.value} kategorisindeki ürünleri, kullanım özelliklerini ve uygulama seçeneklerini inceleyin.`
+);
+const seoTitle = computed(() =>
+  selectedCategory.value === "all"
+    ? "Ürünlerimiz | Tente, Pergola ve Cam Sistemleri - DYLegendary"
+    : `${categoryName.value} Modelleri | DYLegendary Tente İzmir`
+);
+const canonicalUrl = computed(() =>
+  selectedCategory.value === "all"
+    ? `${siteUrl}/products`
+    : `${siteUrl}/products?category=${encodeURIComponent(selectedCategory.value)}`
+);
 
 const filteredProducts = computed(() => {
-  if (!store.products) return [];
-
   return selectedCategory.value === "all"
     ? store.products
-    : store.products.filter((p) => p.category === selectedCategory.value);
+    : store.products.filter(product => product.category === selectedCategory.value);
+});
+
+useSeoMeta({
+  title: () => seoTitle.value,
+  description: () => pageIntro.value,
+  robots: "index, follow",
+  ogTitle: () => seoTitle.value,
+  ogDescription: () => pageIntro.value,
+  ogType: "website",
+  ogUrl: () => canonicalUrl.value,
+  ogImage: socialImage,
+  ogImageAlt: "DYLegendary Tente ürünleri",
+  twitterCard: "summary_large_image",
+  twitterTitle: () => seoTitle.value,
+  twitterDescription: () => pageIntro.value,
+  twitterImage: socialImage,
+  twitterImageAlt: "DYLegendary Tente ürünleri"
+});
+
+useHead(() => {
+  const itemList = filteredProducts.value.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `${siteUrl}/product-detail/${product.category}/${product.key}`,
+    item: {
+      "@type": "Product",
+      name: product.title,
+      description: product.description,
+      image: product.img
+    }
+  }));
+
+  return {
+    link: [
+      { key: "canonical", rel: "canonical", href: canonicalUrl.value }
+    ],
+    script: [
+      {
+        key: "products-structured-data",
+        type: "application/ld+json",
+        textContent: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              name: pageHeading.value,
+              description: pageIntro.value,
+              url: canonicalUrl.value,
+              mainEntity: {
+                "@type": "ItemList",
+                numberOfItems: itemList.length,
+                itemListElement: itemList
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Ana Sayfa",
+                  item: `${siteUrl}/`
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: categoryName.value,
+                  item: canonicalUrl.value
+                }
+              ]
+            }
+          ]
+        })
+      }
+    ]
+  };
 });
 </script>
 

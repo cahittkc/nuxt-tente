@@ -521,7 +521,10 @@
 </template>
 
 <script setup lang="ts">
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Carousel, Slide } from "vue3-carousel";
+import homeBanner from "~/assets/images/home_page_banner_last.jpg";
+
+const socialImage = new URL(homeBanner, "https://dylegendary.com").href;
 
 // SEO Meta Tags
 useHead({
@@ -554,12 +557,11 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://dylegendary.com",
+      content: "https://dylegendary.com/",
     },
     {
       property: "og:image",
-      content:
-        "https://dylegendary.com/assets/images/home_page_banner_last.jpg",
+      content: socialImage,
     },
     {
       name: "twitter:card",
@@ -576,14 +578,13 @@ useHead({
     },
     {
       name: "twitter:image",
-      content:
-        "https://dylegendary.com/assets/images/home_page_banner_last.jpg",
+      content: socialImage,
     },
   ],
   link: [
     {
       rel: "canonical",
-      href: "https://dylegendary.com",
+      href: "https://dylegendary.com/",
     },
   ],
   script: [
@@ -595,7 +596,7 @@ useHead({
         name: "DYLegendary Tente",
         description:
           "İzmir'de 30 yıllık deneyimle tente, pergola, branda, lojistik, dorse ve cam sistemleri hizmeti veren firma",
-        url: "https://dylegendary.com",
+        url: "https://dylegendary.com/",
         telephone: "+90-541-928-54-87",
         address: {
           "@type": "PostalAddress",
@@ -603,13 +604,6 @@ useHead({
           addressRegion: "İzmir",
           addressCountry: "TR",
         },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 38.4192,
-          longitude: 27.1287,
-        },
-        openingHours: "Mo-Sa 08:30-18:30",
-        priceRange: "$$",
         serviceArea: {
           "@type": "City",
           name: "İzmir",
@@ -669,11 +663,6 @@ useHead({
             },
           ],
         },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          reviewCount: "150",
-        },
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+90-541-928-54-87",
@@ -698,88 +687,7 @@ useHead({
 });
 
 definePageMeta({
-  layout: "default",
-  title:
-    "DYLegendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri",
-  meta: [
-    {
-      name: "description",
-      content:
-        "DYLegendary Tente ile İzmir'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet. İzmir tente firması.",
-    },
-    {
-      name: "keywords",
-      content:
-        "tente izmir, pergola izmir, branda izmir, cam balkon izmir, gölgelendirme sistemleri, tente firması izmir, pergola firması, branda firması, cam sistemleri, dış mekan çözümleri, tente montaj, pergola montaj, dorse, tente, gölgelik, jüt, dorse sistemleri, jüt kumaş, gölgelik sistemleri",
-    },
-    {
-      name: "author",
-      content: "DYLegendary Tente",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-    {
-      property: "og:title",
-      content:
-        "DYLegendary Tente - İzmir Tente Sistemleri | Pergola, Branda, Cam Sistemleri",
-    },
-    {
-      property: "og:description",
-      content:
-        "DYLegendary Tente ile İzmir'de Pergola, Branda, Cam Sistemleri gibi dış mekan çözümlerinde profesyonel hizmet. 30 yıllık deneyim, ücretsiz keşif ve garantili hizmet.",
-    },
-    {
-      property: "og:type",
-      content: "website",
-    },
-    {
-      property: "og:url",
-      content: "https://dylegendary.com",
-    },
-    {
-      property: "og:image",
-      content: "https://dylegendary.com/og-image.jpg",
-    },
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      name: "twitter:title",
-      content: "DYLegendary Tente - İzmir Tente Sistemleri",
-    },
-    {
-      name: "twitter:description",
-      content:
-        "İzmir'de 30 yıllık deneyimle tente, pergola, branda ve cam sistemleri. Profesyonel hizmet, garantili çözümler.",
-    },
-    {
-      name: "twitter:image",
-      content: "https://dylegendary.com/twitter-image.jpg",
-    },
-    {
-      name: "canonical",
-      content: "https://dylegendary.com",
-    },
-    {
-      name: "geo.region",
-      content: "TR-35",
-    },
-    {
-      name: "geo.placename",
-      content: "İzmir",
-    },
-    {
-      name: "geo.position",
-      content: "38.4192;27.1287",
-    },
-    {
-      name: "ICBM",
-      content: "38.4192, 27.1287",
-    },
-  ],
+  layout: "default"
 });
 
 const carouselReferenceConfig = {

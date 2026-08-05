@@ -709,37 +709,37 @@ const sirketCarousel = {
 const urunler = [
   {
     title: "Karoser Uygulamaları & Dorse Kayar Perde Sistemleri ",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/karoser_branda10.jpg",
+    img: "/images/dorse/karoser_branda10.jpg",
     key: "karoser_uygulamalari",
   },
   {
     title: "PERGOLA",
-    img: "/image/images/blocjout_pergola/1.png",
+    img: "/images/blocjout_pergola/1.png",
     key: "pergola",
   },
   {
     title: "TENTE",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/wintent_tente3.png",
+    img: "/images/kasetli_tente/kasetli_tente1.png",
     key: "tente",
   },
   {
     title: "CAM SİSTEMLERİ",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/giyotin_cam1.png",
+    img: "/images/giyotin/giyotin_cam1.png",
     key: "cam_sistemleri",
   },
   {
     title: "TEKNİK TEKSTİL PERDELER",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/perde_cam1.png",
+    img: "/images/perde_cam/perde_cam1.png",
     key: "teknik_tekstil_perdeler",
   },
   {
     title: "BRANDA UYGULAMALARI",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/branda_uygulamasi1.png",
+    img: "/images/branda/branda_uygulamasi1.png",
     key: "branda_uygulamalari",
   },
   {
     title: "ÇADIR",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/cadir2.png",
+    img: "/images/cadir/cadir2.png",
     key: "cadir",
   },
 ];

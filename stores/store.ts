@@ -93,14 +93,14 @@ export const useStore = defineStore('store', {
                   'Minimalist çizgilere sahip, mimari yapıya uyumlu bir görünüm sunar.',
                   'Tavan altına veya raylara entegre LED sistemleriyle gece kullanımı desteklenebilir.'
                 ],
-                img: 'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola1.png',
+                img: '/images/rolling_roof/rolling_roof_pergola1.png',
                 images : [
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola1.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola2.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola3.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola4.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola5.png',
-                  'https://tent-bckt.s3.eu-north-1.amazonaws.com/rolling_roof_pergola6.png',
+                  '/images/rolling_roof/rolling_roof_pergola1.png',
+                  '/images/rolling_roof/rolling_roof_pergola2.png',
+                  '/images/rolling_roof/rolling_roof_pergola3.png',
+                  '/images/rolling_roof/rolling_roof_pergola4.png',
+                  '/images/rolling_roof/rolling_roof_pergola5.png',
+                  '/images/rolling_roof/rolling_roof_pergola6.png',
                 ],
               },
               {

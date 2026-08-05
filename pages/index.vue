@@ -714,7 +714,7 @@ const urunler = [
   },
   {
     title: "PERGOLA",
-    img: "https://tent-bckt.s3.eu-north-1.amazonaws.com/standart_blackout_pergola2.png",
+    img: "/image/images/blocjout_pergola/1.png",
     key: "pergola",
   },
   {
